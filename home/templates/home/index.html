@@ -5,16 +5,78 @@
   </div>
 </div>
 {% endblock %} {% block content %}
-<div class="container h-100">
-  <div class="row h-100">
+<div class="container hero-img">
+  <div class="row">
     <div class="col-7 col-md-6 my-auto">
-      <h1 class="display-4 logo-font text-black">The new collections are here</h1>
+      <h1 class="display-4 logo-font text-black">The ski season is here. Are you ready?</h1>
     </div>
-    <div class="my-5">
+  </div>
+  <div class="row">
+    <div class="col-7 col-md-6 my-2">
       <h4>
-        <a href="" class="shop-now-button btn btn-lg rounded-0 text-uppercased py-3">Show Now</a>
+        <a href="" class="shop-now-button btn btn-lg rounded-0 text-uppercased py-3">Shop Now</a>
       </h4>
     </div>
   </div>
 </div>
+
+<div class="container sign-up-card">
+  {% if request.user.is_authenticated %}
+  <div class="d-none"></div>
+  {% else %}
+  <div class="card text-center mb-5">
+    <div class="card-body">
+      <h5 class="card-title text-black">Join the Bluebird Family and save!</h5>
+      <p class="card-text text-black">
+        By signing up to be a Bluebird Ski Shop member you save 10% on all purchases, services, and
+        rentals!
+      </p>
+      <a href="#" class="btn btn-primary">Join Now</a>
+    </div>
+  </div>
+  {% endif %}
+</div>
+
+<section class="container" id="services">
+  <div class="row mb-5">
+    <div class="col-12">
+      <h1 class="logo-font display-5 text-black mb-5 text-center">Services</h1>
+    </div>
+    <div class="card-deck">
+      <div class="card">
+        <img src="..." class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            This is a longer card with supporting text below as a natural lead-in to additional
+            content. This content is a little bit longer.
+          </p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="..." class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            This card has supporting text below as a natural lead-in to additional content.
+          </p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="..." class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            This is a wider card with supporting text below as a natural lead-in to additional
+            content. This card has even longer content than the first to show that equal height
+            action.
+          </p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 {% endblock %}

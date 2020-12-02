@@ -13,7 +13,10 @@
       integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap" />
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" />
     {% endblock %} {% block extra_css %} {% endblock %} {% block corejs %}
+    <script src="https://kit.fontawesome.com/e9c73d7092.js" crossorigin="anonymous"></script>
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -33,30 +36,123 @@
     <title>Bluebird Ski Shop {% block extra_title %}{% endblock %}</title>
   </head>
   <body>
-    <header class="container-fluid fixed-top">
-      <div class="row">
-        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-          <h2 class="logo-font text-black my-0">
-            <a href="{% url 'home' %}" class="nav-link main-logo-link">Bluebird Ski Shop</a>
+    <div class="hero-img-container"></div>
+    <header class="container-fluid fixed-top nav-header">
+      <nav class="navbar navbar-expand-lg main-nav">
+        <div class="container-fluid">
+          <h2 class="logo-font text-black align-middle">
+            <a href="{% url 'home' %}" class="navbar-brand nav-link main-logo-link p-0"
+              >Bluebird Ski Shop</a
+            >
           </h2>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <div class="my-auto py-1 py-lg-0">
+              <ul class="navbar-nav nav justify-content-end w-100">
+                <li class="list-inline-item mx-3">
+                  <a class="text-black nav-link p-0" href="#">
+                    <div clas="text-center">
+                      <p class="my-0">Rentals</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="list-inline-item dropdown mx-3">
+                  <a
+                    class="text-black nav-link p-0"
+                    href="#"
+                    id="user-options"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    <div clas="text-center">
+                      <p class="my-0">Services</p>
+                    </div>
+                  </a>
+                  <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                    <a href="" class="dropdown-item">Wax & Edge</a>
+                    <a href="" class="dropdown-item">Repair</a>
+                    <a href="" class="dropdown-item">Binding Mounting</a>
+                    <a href="" class="dropdown-item">Boot Fitting</a>
+                  </div>
+                </li>
+                <li class="list-inline-item dropdown mx-3">
+                  <a
+                    class="text-black nav-link p-0"
+                    href="#"
+                    id="user-options"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    <div clas="text-center">
+                      <p class="my-0">My Account</p>
+                    </div>
+                  </a>
+                  <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                    {% if request.user.is_authenticated %} {% if request.user.is_superuser %}
+                    <a href="" class="dropdown-item">Product Management</a>
+                    {% endif %}
+                    <a href="" class="dropdown-item">My Profile</a>
+                    <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                    {% else %}
+                    <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                    <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                    {% endif %}
+                  </div>
+                </li>
+                <li class="list-inline-item mx-3">
+                  <a
+                    class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link p-0"
+                    href=""
+                  >
+                    <div class="text-center">
+                      <p class="my-0">
+                        {% if grand_total %} ${{ grand_total|floatformat:2 }} {% else %} $0.00
+
+                        <!--  -->
+                        {% endif %}
+                      </p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-          <a href="{% url 'home' %}" class="nav-link main-logo-link">Rentals</a>
-        </div>
-        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-          <a href="{% url 'home' %}" class="nav-link main-logo-link">Services</a>
-        </div>
-        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-          <ul class="list-inline list-unstyled text-center text-lg-right my-0">
-            <li class="list-inline-item dropdown">Cart</li>
-            <li class="list-inline-item">Account</li>
-          </ul>
-        </div>
-      </div>
+      </nav>
     </header>
     {% if messages %}
     <div class="message-container"></div>
     {% endif %} {% block page_header %} {% endblock %} {% block content %} {% endblock %}
+    <!--  -->
+    {% block footer %}
+    <footer class="container-fluid py-5 footer mt-5">
+      <div class="row">
+        <div class="col-8 mx-auto text-center logo-font">Bluebird Ski Shop</div>
+      </div>
+      <div class="row my-2">
+        <div class="col-8 mx-auto text-center">
+          <a href="#"><i class="fab fa-facebook mx-3 icon-medium"></i></a>
+          <a href="#"><i class="fab fa-instagram mx-3 icon-medium"></i></a>
+          <a href="#"><i class="fab fa-twitter mx-3 icon-medium"></i></a>
+        </div>
+      </div>
+      <div class="row">
+        <small class="col-8 mx-auto text-center">&copy; Copyright 2020, Bluebird Ski Shop</small>
+      </div>
+    </footer>
+    {% endblock %}
     <!--  -->
     {% block postloadjs %} {% endblock %}
   </body>
