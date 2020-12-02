@@ -1,0 +1,122 @@
+[
+    {
+        "pk": 1,
+        "model": "services.service",
+        "fields": {
+            "sku": "pp5001340155",
+            "name": "Junior Ski Rentals",
+            "description": "Skis, ski boots, poles, and helmet for kids 13 and under",
+            "price": 24.99,
+            "category": 1,
+            "image": "jr-ski-rental.jpg"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "services.service",
+        "fields": {
+            "sku": "pp5001340156",
+            "name": "Adult Ski Rentals",
+            "description": "Skis, ski boots, poles, and helmet for kids 13 and under",
+            "price": 34.99,
+            "category": 1,
+            "image": "ski-rentals.jpg"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "services.service",
+        "fields": {
+            "sku": "pp5001340157",
+            "name": "Junior Snowboard Rentals",
+            "description": "Snowboard, snowboard boots, and helmet for kids 13 and under",
+            "price": 24.99,
+            "category": 1,
+            "image": "jr-snowboard-rental.jpg"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "services.service",
+        "fields": {
+            "sku": "pp5001340157",
+            "name": "Adult Snowboard Rentals",
+            "description": "Snowboard, snowboard boots, and helmet for kids 13 and under",
+            "price": 34.99,
+            "category": 1,
+            "image": "snowboard-rental.jpg"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "services.service",
+        "fields": {
+            "sku": "pp5001340157",
+            "name": "Ski/Snowboard Tuning",
+            "description": "Have one of our experts tune your skis or board so you are ready for the season!",
+            "price": 44.99,
+            "category": 3,
+            "image": "ski-tuning.jpg"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "services.service",
+        "fields": {
+            "sku": "pp5001340157",
+            "name": "Hot Ski/Snowboard Wax",
+            "description": "Smooth out your skiing with a fresh wax!",
+            "price": 14.99,
+            "category": 3,
+            "image": "ski-wax.jpg"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "services.service",
+        "fields": {
+            "sku": "pp5001340157",
+            "name": "Ski/Snowboard Edging",
+            "description": "Carve better with freshly edged skis",
+            "price": 9.99,
+            "category": 3,
+            "image": "ski-edge.jpg"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "services.service",
+        "fields": {
+            "sku": "pp5001340157",
+            "name": "Ski Boot Fitting",
+            "description": "Let one our boot fitting experts find the perfect pair of ski boots for you.",
+            "price": 99.99,
+            "category": 5,
+            "image": "ski-boots.jpg"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "services.service",
+        "fields": {
+            "sku": "pp5001340157",
+            "name": "Mount/Re-mount Bindings",
+            "description": "Mount new skis or re-mount old skis with new bindings in no time!",
+            "price": 34.99,
+            "category": 4,
+            "image": "ski-mount.jpg"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "services.service",
+        "fields": {
+            "sku": "pp5001340157",
+            "name": "Ski/Snowboard Repair",
+            "description": "Our repair experts will get your skis back in-shape so you can keep shredding all winter long!",
+            "price": 79.99,
+            "category": 2,
+            "image": "ski-repair.jpg"
+        }
+    }
+]

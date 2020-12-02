@@ -1,0 +1,42 @@
+[
+    {
+        "pk": 1,
+        "model": "services.category",
+        "fields": {
+            "name": "rentals",
+            "friendly_name": "Rentals"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "services.category",
+        "fields": {
+            "name": "repairs",
+            "friendly_name": "Repairs"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "services.category",
+        "fields": {
+            "name": "tuning",
+            "friendly_name": "Tuning"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "services.category",
+        "fields": {
+            "name": "mounting",
+            "friendly_name": "Mounting"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "services.category",
+        "fields": {
+            "name": "bootfitting",
+            "friendly_name": "Boot Fitting"
+        }
+    }
+]
