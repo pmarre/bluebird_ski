@@ -39,7 +39,7 @@
         "pk": 4,
         "model": "services.service",
         "fields": {
-            "sku": "pp5001340157",
+            "sku": "pp5001340158",
             "name": "Adult Snowboard Rentals",
             "description": "Snowboard, snowboard boots, and helmet for kids 13 and under",
             "price": 34.99,
@@ -51,7 +51,7 @@
         "pk": 5,
         "model": "services.service",
         "fields": {
-            "sku": "pp5001340157",
+            "sku": "pp5001340159",
             "name": "Ski/Snowboard Tuning",
             "description": "Have one of our experts tune your skis or board so you are ready for the season!",
             "price": 44.99,
@@ -63,7 +63,7 @@
         "pk": 6,
         "model": "services.service",
         "fields": {
-            "sku": "pp5001340157",
+            "sku": "pp5001340160",
             "name": "Hot Ski/Snowboard Wax",
             "description": "Smooth out your skiing with a fresh wax!",
             "price": 14.99,
@@ -75,7 +75,7 @@
         "pk": 7,
         "model": "services.service",
         "fields": {
-            "sku": "pp5001340157",
+            "sku": "pp5001340161",
             "name": "Ski/Snowboard Edging",
             "description": "Carve better with freshly edged skis",
             "price": 9.99,
@@ -87,7 +87,7 @@
         "pk": 8,
         "model": "services.service",
         "fields": {
-            "sku": "pp5001340157",
+            "sku": "pp5001340162",
             "name": "Ski Boot Fitting",
             "description": "Let one our boot fitting experts find the perfect pair of ski boots for you.",
             "price": 99.99,
@@ -99,7 +99,7 @@
         "pk": 9,
         "model": "services.service",
         "fields": {
-            "sku": "pp5001340157",
+            "sku": "pp5001340163",
             "name": "Mount/Re-mount Bindings",
             "description": "Mount new skis or re-mount old skis with new bindings in no time!",
             "price": 34.99,
@@ -111,7 +111,7 @@
         "pk": 10,
         "model": "services.service",
         "fields": {
-            "sku": "pp5001340157",
+            "sku": "pp5001340164",
             "name": "Ski/Snowboard Repair",
             "description": "Our repair experts will get your skis back in-shape so you can keep shredding all winter long!",
             "price": 79.99,
