@@ -5,7 +5,7 @@
         "fields": {
             "sku": "pp5001340155",
             "name": "Junior Ski Rentals",
-            "description": "Skis, ski boots, poles, and helmet for kids 13 and under",
+            "description": "Skis, ski boots, poles, and helmet for kids 13 and under.",
             "price": 24.99,
             "category": 1,
             "image": "jr-ski-rental.jpg"
@@ -17,7 +17,7 @@
         "fields": {
             "sku": "pp5001340156",
             "name": "Adult Ski Rentals",
-            "description": "Skis, ski boots, poles, and helmet for kids 13 and under",
+            "description": "Skis, ski boots, poles, and helmet.",
             "price": 34.99,
             "category": 1,
             "image": "ski-rentals.jpg"
@@ -41,7 +41,7 @@
         "fields": {
             "sku": "pp5001340158",
             "name": "Adult Snowboard Rentals",
-            "description": "Snowboard, snowboard boots, and helmet for kids 13 and under",
+            "description": "Snowboard, snowboard boots, and helmet.",
             "price": 34.99,
             "category": 1,
             "image": "snowboard-rental.jpg"
@@ -77,7 +77,7 @@
         "fields": {
             "sku": "pp5001340161",
             "name": "Ski/Snowboard Edging",
-            "description": "Carve better with freshly edged skis",
+            "description": "Carve better with freshly edged skis.",
             "price": 9.99,
             "category": 3,
             "image": "ski-edge.jpg"

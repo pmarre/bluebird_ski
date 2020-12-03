@@ -36,7 +36,6 @@
     <title>Bluebird Ski Shop {% block extra_title %}{% endblock %}</title>
   </head>
   <body>
-    <div class="hero-img-container"></div>
     <header class="container-fluid fixed-top nav-header">
       <nav class="navbar navbar-expand-lg main-nav">
         <div class="container-fluid">
@@ -54,10 +53,12 @@
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon p-0 m-0"
+              ><i class="fas fa-bars my-auto d-block p-0"></i
+            ></span>
           </button>
           <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <div class="my-auto py-1 py-lg-0">
+            <div class="my-auto py-1 py-lg-0 bg-white">
               <ul class="navbar-nav nav justify-content-end w-100">
                 <li class="list-inline-item mx-3">
                   <a class="text-black nav-link p-0" href="#">
@@ -84,6 +85,7 @@
                     <a href="" class="dropdown-item">Repair</a>
                     <a href="" class="dropdown-item">Binding Mounting</a>
                     <a href="" class="dropdown-item">Boot Fitting</a>
+                    <a href="{% url 'services' %}" class="dropdown-item">All Services</a>
                   </div>
                 </li>
                 <li class="list-inline-item dropdown mx-3">
@@ -116,7 +118,7 @@
                     class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link p-0"
                     href=""
                   >
-                    <div class="text-center">
+                    <div>
                       <p class="my-0">
                         {% if grand_total %} ${{ grand_total|floatformat:2 }} {% else %} $0.00
 
@@ -132,7 +134,17 @@
         </div>
       </nav>
     </header>
-    {% if messages %}
+    {% if request.user.is_authenticated %}
+    <div class="d-none"></div>
+    {% else %}
+    <div class="alert alert-info alert-dismissible fade show" role="alert">
+      <strong>Save 10%!</strong> Enjoy instant savings when you become a Bluebird member.
+      <a href="#">Join now!</a>
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% endif %} {% if messages %}
     <div class="message-container"></div>
     {% endif %} {% block page_header %} {% endblock %} {% block content %} {% endblock %}
     <!--  -->

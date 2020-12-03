@@ -1,4 +1,5 @@
 {% extends 'base.html' %} {% load static %} {% block page_header %}
+<div class="hero-img-container"></div>
 <div class="header-container container">
   <div class="row">
     <div class="col"></div>
@@ -24,7 +25,7 @@
   {% if request.user.is_authenticated %}
   <div class="d-none"></div>
   {% else %}
-  <div class="card text-center mb-5">
+  <div class="card text-center mb-5 join-card">
     <div class="card-body">
       <h5 class="card-title text-black">Join the Bluebird Family and save!</h5>
       <p class="card-text text-black">
