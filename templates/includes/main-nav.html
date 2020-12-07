@@ -1,0 +1,100 @@
+<nav class="navbar navbar-expand-lg main-nav">
+  <div class="container-fluid">
+    <h2 class="logo-font text-black align-middle">
+      <a href="{% url 'home' %}" class="navbar-brand nav-link main-logo-link p-0"
+        >Bluebird Ski Shop</a
+      >
+    </h2>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon p-0 m-0"
+        ><i class="fas fa-bars my-auto d-block p-0"></i
+      ></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <div class="my-auto py-1 py-lg-0 bg-white">
+        <ul class="navbar-nav nav justify-content-end w-100">
+          <li class="list-inline-item mx-3">
+            <a class="text-black nav-link p-0" href="{% url 'services' %}?category=rentals">
+              <div clas="text-center">
+                <p class="my-0">Rentals</p>
+              </div>
+            </a>
+          </li>
+          <li class="list-inline-item dropdown mx-3">
+            <a
+              class="text-black nav-link p-0"
+              href="#"
+              id="user-options"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <div clas="text-center">
+                <p class="my-0">Services</p>
+              </div>
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+              <a href="{% url 'services' %}?category=tuning" class="dropdown-item">Tuning</a>
+              <a href="{% url 'services' %}?category=repairs" class="dropdown-item">Repairs</a>
+              <a href="{% url 'services' %}?category=mounting" class="dropdown-item"
+                >Binding Mounting</a
+              >
+              <a href="{% url 'services' %}?category=bootfitting" class="dropdown-item"
+                >Boot Fitting</a
+              >
+              <a href="{% url 'services' %}" class="dropdown-item">All Services</a>
+            </div>
+          </li>
+          <li class="list-inline-item dropdown mx-3">
+            <a
+              class="text-black nav-link p-0"
+              href="#"
+              id="user-options"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <div clas="text-center">
+                <p class="my-0">My Account</p>
+              </div>
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+              {% if request.user.is_authenticated %} {% if request.user.is_superuser %}
+              <a href="" class="dropdown-item">service Management</a>
+              {% endif %}
+              <a href="" class="dropdown-item">My Profile</a>
+              <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+              {% else %}
+              <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+              <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+              {% endif %}
+            </div>
+          </li>
+          <li class="list-inline-item mx-3">
+            <a
+              class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link p-0"
+              href=""
+            >
+              <div>
+                <p class="my-0">
+                  {% if grand_total %} ${{ grand_total|floatformat:2 }} {% else %} $0.00
+
+                  <!--  -->
+                  {% endif %}
+                </p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>

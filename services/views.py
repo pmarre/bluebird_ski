@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Service
+from .models import Service, Category
 # Create your views here.
 
 
@@ -7,9 +7,17 @@ def all_services(request):
     ''' A view to show all services '''
 
     services = Service.objects.all()
+    categories = None
+
+    if request.GET:
+        if 'category' in request.GET:
+            categories = [request.GET['category']]
+            services = services.filter(category__name__in=categories)
+            categories = Category.objects.filter(name__in=categories)
 
     context = {
-        'services': services
+        'services': services,
+        'current_categories': categories
     }
 
     return render(request, 'services/services.html', context)
