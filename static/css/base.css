@@ -80,7 +80,7 @@ body {
 
 .cart-container {
   margin-top: 140px;
-  height: calc(90vh - 200px);
+  height: 100%;
 }
 
 /* from Bulma */

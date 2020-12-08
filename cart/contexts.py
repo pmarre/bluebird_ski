@@ -23,15 +23,20 @@ def cart_contents(request):
         })
 
     if u_name == 'AnonymousUser':
-        print('not a member')
+        grand_total = total
+        discount = 0
     else:
         discount = total * Decimal(0.1)
-        total = total - discount
+        grand_total = total - discount
 
     context = {
         'cart_items': cart_items,
         'total': total,
         'service_count': service_count,
+        'grand_total': grand_total,
+        'discount': discount,
+        'total': total,
+
     }
 
     return context
