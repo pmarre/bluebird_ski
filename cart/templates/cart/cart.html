@@ -1,0 +1,24 @@
+{% extends 'base.html' %} {% load static %} {% block page_header %} {% endblock %}
+<!--  -->
+{% block content %}
+<div class="container cart-container">
+  <div class="row mb-2">
+    <div class="col">
+      <h2 class="logo-font display-5">Shopping Cart</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      {% if cart_items %}
+      <div class="table-responsive rounded">{{ cart_items }}</div>
+      {% else %}
+      <p class="lead mb-5">No items in your cart</p>
+      <a href="{% url 'services' %}" class="btn btn-info rounded-0 btn-lg">
+        <span class="text-uppercase">Keep Shopping</span>
+      </a>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% endblock %}

@@ -78,6 +78,11 @@ body {
   margin-top: calc(70px + 10vh);
 }
 
+.cart-container {
+  margin-top: 140px;
+  height: calc(90vh - 200px);
+}
+
 /* from Bulma */
 .icon {
   align-items: center;
