@@ -1,4 +1,6 @@
-{% extends 'base.html' %} {% load static %} {% block page_header %} {% endblock %}
+{% extends 'base.html' %} {% load static %} {% load cart_tools %} {% block page_header %}
+<!--  -->
+{% endblock %}
 <!--  -->
 {% block content %}
 <div class="container cart-container">
@@ -91,7 +93,7 @@
               >
             </td>
             <td class="py-3">
-              <p class="my-0">${{item.service.price}}</p>
+              <p class="my-0">${{item.service.price | calc_subtotal:item.quantity }}</p>
             </td>
           </tr>
           {% endfor %}
@@ -99,7 +101,7 @@
             <td colspan="5" class="pt-5 text-right">
               <h6><strong>Cart Total: ${{ total|floatformat:2 }}</strong></h6>
               {% if request.user.is_authenticated %}
-              <h6>Membership discount: -${{ discount|floatformat:2 }}</h6>
+              <h6>Member discount: -${{ discount|floatformat:2 }}</h6>
               {% endif %}
               <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
             </td>
