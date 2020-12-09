@@ -12,15 +12,31 @@ def cart_contents(request):
     cart = request.session.get('cart', {})
     u_name = str(request.user)
 
-    for item_id, quantity in cart.items():
-        service = get_object_or_404(Service, pk=item_id)
-        total += quantity * service.price
-        service_count += quantity
-        cart_items.append({
-            'item_id': item_id,
-            'quantity': quantity,
-            'service': service,
-        })
+    for item_id, item_data in cart.items():
+        if isinstance(item_data, int):
+            service = get_object_or_404(Service, pk=item_id)
+            total += item_data * service.price
+            service_count += item_data
+            cart_items.append({
+                'item_id': item_id,
+                'quantity': item_data,
+                'service': service,
+            })
+        else:
+            service = get_object_or_404(Service, pk=item_id)
+            for size, quantity in item_data['items_by_size'].items():
+                total += quantity * service.price
+                service_count += quantity
+                size = size.split(',')
+                combined_size = '{},{}'.format(size[0], size[1])
+                cart_items.append({
+                    'item_id': item_id,
+                    'quantity': quantity,
+                    'service': service,
+                    'size': combined_size,
+                    'boot_size': size[0],
+                    'ski_size': size[1],
+                })
 
     if u_name == 'AnonymousUser':
         grand_total = total

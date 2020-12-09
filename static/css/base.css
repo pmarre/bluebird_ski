@@ -96,6 +96,11 @@ body {
   width: fit-content;
 }
 
+.update-link,
+.remove-link {
+  cursor: pointer;
+}
+
 .shop-now-button {
   background: black;
   color: white;

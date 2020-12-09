@@ -16,10 +16,65 @@
         <form class="form" action="{% url 'add_to_cart' service.id %}" method="POST">
           {% csrf_token %}
           <div class="form-row">
+            {% with service.has_sizes as s %} {% if s %}
+            <div class="col-12">
+              <p class="mb-0"><strong>Boot Size:</strong></p>
+              <a
+                href="https://www.evo.com/guides/ski-boot-size-chart-mondo-point-conversion"
+                class="small muted align-center"
+                target="_blank"
+                >Ski boot sizing chart</a
+              >
+              <span class="align-center"> | </span>
+              <a
+                href="https://www.evo.com/guides/snowboard-boot-size-chart-mondo-conversion"
+                class="small muted align-center"
+                target="_blank"
+                >Snowboard boot sizing chart</a
+              >
+              <select class="form-control rounded-0 w-50 mt-2" name="boot_size" id="id_boot_size">
+                {% for i in boot_sizes %}
+                <option value="{{i}}">{{i}}/{{i}}.5</option>
+                {% endfor %}
+              </select>
+            </div>
+            <div class="col-12 mt-3">
+              <p class="mb-0"><strong>Ski/Snowboard Size:</strong></p>
+              <a
+                href="https://www.evo.com/guides/how-to-choose-skis-size-chart#size-chart"
+                class="small muted align-center"
+                target="_blank"
+                >Ski sizing chart</a
+              >
+              <span class="align-center"> | </span>
+              <a
+                href="https://www.evo.com/guides/how-to-choose-a-snowboard-and-size-chart#size-chart"
+                class="small muted align-center"
+                target="_blank"
+                >Snowboard sizing chart</a
+              >
+              <select class="form-control rounded-0 w-50 mt-2" name="ski_size" id="id_ski_size">
+                {% for i in ski_sizes %}
+                <option value="{{i}}">{{i}}-{{i|add:"9"}}cm</option>
+                {% endfor %}
+              </select>
+            </div>
+            {% endif %}
             <div class="col-12">
               <p class="mt-3"><strong>Quantity:</strong></p>
               <div class="form-group w-50">
                 <div class="input-group">
+                  <div class="input-group-prepend">
+                    <button
+                      class="decrement-qty btn btn-black rounded-0"
+                      data-item_id="{{ service.id }}"
+                      id="decrement-qty_{{ service.id }}"
+                    >
+                      <span class="icon">
+                        <i class="fas fa-minus"></i>
+                      </span>
+                    </button>
+                  </div>
                   <input
                     class="form-control qty_input"
                     type="number"
@@ -30,6 +85,17 @@
                     data-item_id="{{ service.id }}"
                     id="id_qty_{{ service.id }}"
                   />
+                  <div class="input-group-append">
+                    <button
+                      class="increment-qty btn btn-black rounded-0"
+                      data-item_id="{{ service.id }}"
+                      id="increment-qty_{{ service.id }}"
+                    >
+                      <span class="icon">
+                        <i class="fas fa-plus"></i>
+                      </span>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -49,9 +115,18 @@
             </div>
             <input type="hidden" name="redirect_url" value="{{ request.path }}" />
           </div>
+          {% endwith %}
         </form>
       </div>
     </div>
   </div>
 </div>
+{% endblock %}
+<!--  -->
+{% block postloadjs %}
+<!--  -->
+{{ block.super }}
+<!--  -->
+{% include 'services/includes/quantity_input_script.html' %}
+<!--  -->
 {% endblock %}

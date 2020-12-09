@@ -27,9 +27,19 @@ def service_detail(request, service_id):
     ''' A detail view of service '''
 
     service = get_object_or_404(Service, pk=service_id)
+    boot_sizes = []
+    ski_sizes = []
+
+    for i in range(120, 220, 10):
+        ski_sizes.append(i)
+
+    for i in range(15, 35, 1):
+        boot_sizes.append(i)
 
     context = {
-        'service': service
+        'service': service,
+        'boot_sizes': boot_sizes,
+        'ski_sizes': ski_sizes,
     }
 
     return render(request, 'services/service_detail.html', context)
