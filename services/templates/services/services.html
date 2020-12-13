@@ -9,13 +9,23 @@
     <div class="col mb-4">
       <div class="card h-100">
         <a href="{% url 'service_detail' service.id %}">
-          <img src="/media/{{service.image}}" class="card-img-top" alt="..." />
+          {% if service.image %}
+          <img src="/media/{{service.image}}" alt="" class="card-img-top" />
+          {% else %}
+          <img src="/media/ski-edge.jpg" alt="" class="card-img-top" />
+          {% endif %}
         </a>
         <div class="card-body">
           <h5 class="card-title">{{service.name}}</h5>
           <p class="card-text">{{service.description}}</p>
           <p class="card-text">${{service.price}}</p>
         </div>
+        {% if request.user.is_superuser %}
+        <small class="ml-3">
+          <a href="{% url 'edit_service' service.id %}">Edit</a>
+          <a class="text-danger" href="{% url 'delete_service' service.id %}">Delete</a>
+        </small>
+        {% endif %}
       </div>
     </div>
 
