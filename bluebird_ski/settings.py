@@ -184,7 +184,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 if 'USE_AWS' in os.environ:
     # Bucket Config
-    AWS_STORAGE_BUCKET = 'bluebird-ski-shop'
+    AWS_STORAGE_BUCKET_NAME = 'bluebird-ski-shop'
     AWS_S3_REGION_NAME = 'us-west-1'
     AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
     AWS_SECRET_KEY = os.environ.get('AWS_SECRET_KEY')
