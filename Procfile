@@ -1,1 +1,1 @@
-web: gunicorn bluebird_ski:wsgi:application
+web: gunicorn bluebird_ski_v1:wsgi:application
