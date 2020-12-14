@@ -6,9 +6,9 @@
     <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
       <div class="image-container my-5">
         {% if service.image %}
-        <img src="/media/{{service.image}}" alt="" class="card-img-top" />
+        <img src="https://bluebird-ski-shop.s3-us-west-1.amazonaws.com/media/{{service.image}}" alt="" class="card-img-top" />
         {% else %}
-        <img src="/media/ski-edge.jpg" alt="" class="card-img-top" />
+        <img src="https://bluebird-ski-shop.s3-us-west-1.amazonaws.com/media/ski-edge.jpg" alt="" class="card-img-top" />
         {% endif %} {% if request.user.is_superuser %}
         <small class="ml-3">
           <a class="mr-3" href="{% url 'edit_service' service.id %}">Edit</a>

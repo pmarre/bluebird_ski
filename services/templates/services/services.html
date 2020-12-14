@@ -10,9 +10,9 @@
       <div class="card h-100">
         <a href="{% url 'service_detail' service.id %}">
           {% if service.image %}
-          <img src="/media/{{service.image}}" alt="" class="card-img-top" />
+          <img src="https://bluebird-ski-shop.s3-us-west-1.amazonaws.com/media/{{service.image}}" alt="" class="card-img-top" />
           {% else %}
-          <img src="/media/ski-edge.jpg" alt="" class="card-img-top" />
+          <img src="https://bluebird-ski-shop.s3-us-west-1.amazonaws.com/media/ski-edge.jpg" alt="" class="card-img-top" />
           {% endif %}
         </a>
         <div class="card-body">
