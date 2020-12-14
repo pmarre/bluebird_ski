@@ -33,9 +33,9 @@
         <div class="col-2 mb-1">
           <a href="{% url 'service_detail' item.service.id %}">
             {% if item.service.image %}
-            <img class="w-100" src="/media/{{item.service.image }}" alt="{{ service.name }}" />
+            <img class="w-100" src="https://bluebird-ski-shop.s3-us-west-1.amazonaws.com/media/{{item.service.image }}" alt="{{ service.name }}" />
             {% else %}
-            <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ service.name }}" />
+            <img class="w-100" src="https://bluebird-ski-shop.s3-us-west-1.amazonaws.com/media/ski-edge.jpg" alt="{{ service.name }}" />
             {% endif %}
           </a>
         </div>
