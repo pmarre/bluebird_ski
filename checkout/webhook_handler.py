@@ -52,13 +52,15 @@ class StripeWH_Handler:
         save_info = intent.metadata.save_info
 
         billing_details = intent.charges.data[0].billing_details
-        shipping_details = intent.shipping_details
-        grand_total = round(intent.charges.data[0].amount/100, 2)
+        shipping_details = intent.shipping
+        grand_total = round(intent.charges.data[0].amount / 100, 2)
 
+        # Clean data in the shipping details
         for field, value in shipping_details.address.items():
-            if value == '':
+            if value == "":
                 shipping_details.address[field] = None
 
+        # Update profile information if save_info was checked
         profile = None
         username = intent.metadata.username
         if username != 'AnonymousUser':
@@ -87,7 +89,7 @@ class StripeWH_Handler:
                     street_address1__iexact=shipping_details.address.line1,
                     street_address2__iexact=shipping_details.address.line2,
                     county__iexact=shipping_details.address.state,
-                    grand_total__iexact=shipping_details.grand_total,
+                    grand_total=grand_total,
                     original_cart=cart,
                     stripe_pid=pid,
                 )
@@ -115,7 +117,6 @@ class StripeWH_Handler:
                     street_address1=shipping_details.address.line1,
                     street_address2=shipping_details.address.line2,
                     county=shipping_details.address.state,
-                    grand_total=shipping_details.grand_total,
                     original_cart=cart,
                     stripe_pid=pid,
                 )
@@ -131,8 +132,6 @@ class StripeWH_Handler:
                     else:
                         for size, quantity in item_data['items_by_size'].items():
                             size = size.split(',')
-                            combined_size = '{},{}'.format(
-                                size[0], size[1])
                             order_line_item = OrderLineItem(
                                 order=order,
                                 service=service,
@@ -144,11 +143,12 @@ class StripeWH_Handler:
             except Exception as e:
                 if order:
                     order.delete()
-                return HttpResponse(content=f'Webhook received: {event["type"]} | ERROR: {e}',
-                                    status=500)
+                return HttpResponse(
+                    content=f'Webhook received: {event["type"]} | ERROR: {e}',
+                    status=500)
         self._send_confirmation_email(order)
         return HttpResponse(
-            content=f'Webhook received: {event["type"]} | SUCCESS: Created in webhook',
+            content=f'Webhook received: {event["type"]} | SUCCESS: Created order in webhook',
             status=200)
 
     def handle_payment_intent_payment_failed(self, event):
