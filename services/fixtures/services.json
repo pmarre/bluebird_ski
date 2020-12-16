@@ -8,6 +8,7 @@
             "description": "Skis, ski boots, poles, and helmet for kids 13 and under.",
             "price": 24.99,
             "category": 1,
+            "image_url": "https://s3.console.aws.amazon.com/s3/object/bluebird-ski-shop?region=us-west-1&prefix=media/jr-ski-rental.jpg",
             "image": "jr-ski-rental.jpg"
         }
     },
@@ -20,6 +21,7 @@
             "description": "Skis, ski boots, poles, and helmet.",
             "price": 34.99,
             "category": 1,
+            "image_url": "https://s3.console.aws.amazon.com/s3/object/bluebird-ski-shop?region=us-west-1&prefix=media/ski-rentals.jpg",
             "image": "ski-rentals.jpg"
         }
     },
@@ -32,6 +34,7 @@
             "description": "Snowboard, snowboard boots, and helmet for kids 13 and under",
             "price": 24.99,
             "category": 1,
+            "image_url": "https://s3.console.aws.amazon.com/s3/object/bluebird-ski-shop?region=us-west-1&prefix=media/jr-snowboard-rental.jpg",
             "image": "jr-snowboard-rental.jpg"
         }
     },
@@ -44,6 +47,7 @@
             "description": "Snowboard, snowboard boots, and helmet.",
             "price": 34.99,
             "category": 1,
+            "image_url": "https://s3.console.aws.amazon.com/s3/object/bluebird-ski-shop?region=us-west-1&prefix=media/snowboard-rental.jpg",
             "image": "snowboard-rental.jpg"
         }
     },
@@ -56,6 +60,7 @@
             "description": "Have one of our experts tune your skis or board so you are ready for the season!",
             "price": 44.99,
             "category": 3,
+            "image_url": "https://s3.console.aws.amazon.com/s3/object/bluebird-ski-shop?region=us-west-1&prefix=media/ski-tuning.jpg",
             "image": "ski-tuning.jpg"
         }
     },
@@ -68,6 +73,7 @@
             "description": "Smooth out your skiing with a fresh wax!",
             "price": 14.99,
             "category": 3,
+            "image_url": "https://s3.console.aws.amazon.com/s3/object/bluebird-ski-shop?region=us-west-1&prefix=media/ski-wax.jpg",
             "image": "ski-wax.jpg"
         }
     },
@@ -80,6 +86,7 @@
             "description": "Carve better with freshly edged skis.",
             "price": 9.99,
             "category": 3,
+            "image_url": "https://s3.console.aws.amazon.com/s3/object/bluebird-ski-shop?region=us-west-1&prefix=media/ski-edge.jpg",
             "image": "ski-edge.jpg"
         }
     },
@@ -92,6 +99,7 @@
             "description": "Let one our boot fitting experts find the perfect pair of ski boots for you.",
             "price": 99.99,
             "category": 5,
+            "image_url": "https://s3.console.aws.amazon.com/s3/object/bluebird-ski-shop?region=us-west-1&prefix=media/ski-boots.jpg",
             "image": "ski-boots.jpg"
         }
     },
@@ -104,6 +112,7 @@
             "description": "Mount new skis or re-mount old skis with new bindings in no time!",
             "price": 34.99,
             "category": 4,
+            "image_url": "https://s3.console.aws.amazon.com/s3/object/bluebird-ski-shop?region=us-west-1&prefix=media/ski-mount.jpg",
             "image": "ski-mount.jpg"
         }
     },
@@ -116,6 +125,7 @@
             "description": "Our repair experts will get your skis back in-shape so you can keep shredding all winter long!",
             "price": 79.99,
             "category": 2,
+            "image_url": "https://s3.console.aws.amazon.com/s3/object/bluebird-ski-shop?region=us-west-1&prefix=media/ski-repair.jpg",
             "image": "ski-repair.jpg"
         }
     }

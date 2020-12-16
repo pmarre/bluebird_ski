@@ -16,13 +16,13 @@
         <a
           href="{% url 'service_detail' service.id %}"
           class="square-img mx-auto"
-          style="background-image: url(/media/{{service.image}});"
+          style="background-image: url({{service.image.url}});"
         ></a>
         {% else %}
         <a
           href="{% url 'service_detail' service.id %}"
           class="square-img mx-auto"
-          style="background-image: url(/media/{{service.image}});"
+          style="background-image: url(/media/{{service.image.url}});"
         ></a>
         {% endif %}
 
