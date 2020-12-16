@@ -1,22 +1,35 @@
 {% extends 'base.html' %} {% load static %} {% block page_header %} {% endblock %}
 <!--  -->
 {% block content %}
-<div class="container-fluid service-container">
-  <h1 class="text-black text-center display-5 mb-5">Services</h1>
-  <div class="row row-cols-1 row-cols-md-2">
-    {% for service in services %}
+<div class="container-fluid service-container bg-white">
+  {% if request.get_full_path == "/services/?category=rentals" %}
+  <h1 class="text-black text-center display-5 service-header text-uppercase">Rentals</h1>
+  {% else %}
+  <h1 class="text-black text-center display-5 service-header">Services</h1>
+  {% endif %}
 
-    <div class="col mb-4">
-      <div class="card h-100">
-        <a href="{% url 'service_detail' service.id %}">
-          {% if service.image %}
-          <img src="https://bluebird-ski-shop.s3-us-west-1.amazonaws.com/media/{{service.image}}" alt="" class="card-img-top" />
-          {% else %}
-          <img src="https://bluebird-ski-shop.s3-us-west-1.amazonaws.com/media/ski-edge.jpg" alt="" class="card-img-top" />
-          {% endif %}
-        </a>
-        <div class="card-body">
-          <h5 class="card-title">{{service.name}}</h5>
+  <div class="row justify-content-center">
+    {% for service in services %}
+    <div class="col-12 col-md-6 col-xl-4 mb-5">
+      <div class="card h-100 service-card">
+        {% if service.image %}
+        <a
+          href="{% url 'service_detail' service.id %}"
+          class="square-img mx-auto"
+          style="background-image: url(/media/{{service.image}});"
+        ></a>
+        {% else %}
+        <a
+          href="{% url 'service_detail' service.id %}"
+          class="square-img mx-auto"
+          style="background-image: url(/media/{{service.image}});"
+        ></a>
+        {% endif %}
+
+        <div class="card-body text-center">
+          <a href="{% url 'service_detail' service.id %}" class="text-black service-link"
+            ><h5 class="card-title logo-font text-uppercase">{{service.name}}</h5></a
+          >
           <p class="card-text">{{service.description}}</p>
           <p class="card-text">${{service.price}}</p>
         </div>
@@ -28,8 +41,8 @@
         {% endif %}
       </div>
     </div>
-
     {% endfor %}
   </div>
 </div>
+
 {% endblock %}

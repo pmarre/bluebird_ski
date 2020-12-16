@@ -1,3 +1,9 @@
+.checkout-container {
+  padding: 150px 0;
+  height: auto;
+  background-color: #fff;
+}
+
 .StripeElement,
 .stripe-style-input {
   box-sizing: border-box;

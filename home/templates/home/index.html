@@ -7,77 +7,163 @@
 </div>
 {% endblock %} {% block content %}
 <div class="container hero-img">
-  <div class="row">
-    <div class="col-7 col-md-6 my-auto">
-      <h1 class="display-4 logo-font text-black">The ski season is here. Are you ready?</h1>
+  <div class="hero-overlay"></div>
+  <div class="row justify-content-center align-content-center h-100">
+    <div class="col-sm-10 offset-sm-1 offset-md-0 col-md-6 my-auto">
+      <h1 class="hero-text text-white text-center mb-0">The ski season is here.</h1>
+      <h1 class="hero-text text-white text-center mt-0">Are you ready?</h1>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-7 col-md-6 my-2">
-      <h4>
-        <a href="" class="shop-now-button btn btn-lg rounded-0 text-uppercased py-3">Shop Now</a>
-      </h4>
+
+    <div class="row w-100 mx-0 justify-content-center">
+      <div class="col-sm-12 col-md-5">
+        <div class="row justify-content-center d-flex hp-buttons">
+          <h4>
+            <a
+              href="{% url 'services' %}?category=rentals"
+              class="d-block shop-now-button btn btn-lg rounded-0 text-uppercased py-3 m-auto"
+              >Rentals</a
+            >
+          </h4>
+          <h4>
+            <a
+              href="{% url 'services' %}"
+              class="d-block shop-now-button btn btn-lg rounded-0 text-uppercased py-3 m-auto"
+              >Services</a
+            >
+          </h4>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
-<div class="container sign-up-card">
+<div class="container sign-up-card mt-sm-5 mt-md-0">
   {% if request.user.is_authenticated %}
   <div class="d-none"></div>
   {% else %}
   <div class="card text-center mb-5 join-card">
+    <div class="svg-container">
+      <img src="/media/san_francisco.svg" alt="San Francisco" />
+    </div>
     <div class="card-body">
-      <h5 class="card-title text-black">Join the Bluebird Family and save!</h5>
-      <p class="card-text text-black">
+      <h5 class="card-title text-white text-uppercase text-bold logo-font join-title">
+        Join the Bluebird Family and save
+      </h5>
+      <p class="card-text text-white join join-text">
         By signing up to be a Bluebird Ski Shop member you save 10% on all purchases, services, and
         rentals!
       </p>
-      <a href="#" class="btn btn-primary">Join Now</a>
+      <a href="#" class="btn btn-join rounded-0">Join Now</a>
     </div>
   </div>
   {% endif %}
 </div>
 
-<section class="container" id="services">
-  <div class="row mb-5">
-    <div class="col-12">
-      <h1 class="logo-font display-5 text-black mb-5 text-center">Services</h1>
-    </div>
-    <div class="card-deck">
-      <div class="card">
-        <img src="..." class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">
-            This is a longer card with supporting text below as a natural lead-in to additional
-            content. This content is a little bit longer.
-          </p>
-          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-        </div>
+<section class="services-section" id="services">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-12">
+        <h1 class="logo-text text-black mb-5 text-center text-uppercase">Locations</h1>
       </div>
-      <div class="card">
-        <img src="..." class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">
-            This card has supporting text below as a natural lead-in to additional content.
-          </p>
-          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      <div class="card-deck">
+        <div class="card">
+          <img src="/media/mountains.svg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title text-uppercase text-black">San Francisco</h5>
+            <p class="card-text">
+              Our HQ and first store. Built to bring the mountains closer to you.
+            </p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
         </div>
-      </div>
-      <div class="card">
-        <img src="..." class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">
-            This is a wider card with supporting text below as a natural lead-in to additional
-            content. This card has even longer content than the first to show that equal height
-            action.
-          </p>
-          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <div class="card">
+          <img src="/media/mountains.svg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title text-uppercase text-black">Tahoe City</h5>
+            <p class="card-text">
+              Whether you are looking to get your skis ready for the season or just looking for a
+              cup of our famous Bluebird Coffee, stop by anytime!
+            </p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="/media/mountains.svg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title text-uppercase text-black">Bishop</h5>
+            <p class="card-text">
+              Built in the middle of the Sierras so you always have access to the gear you need,
+              when you need it.
+            </p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+<section class="social-section" id="social">
+  <div class="row">
+    <div class="col">
+      <h1 class="logo-text text-black text-uppercase text-center">#bluebirdskiing</h1>
+      <p class="text-black text-center social-text">
+        Get featured on our page! Use #bluebirdskiing and mention @bluebird_ski_shop in your caption
+        on Instagram.
+      </p>
+    </div>
+  </div>
+  <ul class="social-grid">
+    <li class="grid-item item-1">
+      <div class="grid-overlay">
+        <p class="grid-tag">@ski_bum</p>
+      </div>
+    </li>
+    <li class="grid-item item-2">
+      <div class="grid-overlay">
+        <p class="grid-tag">@mountain_adventurer20</p>
+      </div>
+    </li>
+    <li class="grid-item item-3">
+      <div class="grid-overlay">
+        <p class="grid-tag">@taylor_skis</p>
+      </div>
+    </li>
+    <li class="grid-item item-4">
+      <div class="grid-overlay">
+        <p class="grid-tag">@powder_chaser12</p>
+      </div>
+    </li>
+    <li class="grid-item item-5">
+      <div class="grid-overlay">
+        <p class="grid-tag">@snow_luvr</p>
+      </div>
+    </li>
+    <li class="grid-item item-6">
+      <div class="grid-overlay">
+        <p class="grid-tag">@john_smith_official</p>
+      </div>
+    </li>
+    <li class="grid-item item-7">
+      <div class="grid-overlay">
+        <p class="grid-tag">@ski_then_beer</p>
+      </div>
+    </li>
+    <li class="grid-item item-8">
+      <div class="grid-overlay">
+        <p class="grid-tag">@apres_ski</p>
+      </div>
+    </li>
+    <li class="grid-item item-9">
+      <div class="grid-overlay">
+        <p class="grid-tag">@powder_and_pancakes</p>
+      </div>
+    </li>
+    <li class="grid-item item-10">
+      <div class="grid-overlay">
+        <p class="grid-tag">@pow_shredder</p>
+      </div>
+    </li>
+  </ul>
+</section>
+
 {% endblock %}

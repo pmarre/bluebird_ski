@@ -1,10 +1,21 @@
+/* FONTS 
+
+font-family: 'Playfair Display SC', serif;
+font-family: 'Yanone Kaffeesatz', sans-serif;
+
+*/
+
 html {
   height: 100%;
+  width: 100%;
 }
 
 body {
-  color: #555;
-  font-family: 'Lato';
+  color: #000;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  background-color: #000;
+  overflow-x: hidden;
+  height: 100%;
 }
 
 .message-container {
@@ -72,20 +83,34 @@ body {
 }
 
 .main-nav {
-  height: 70px;
-  background-color: #fff;
+  height: 62px;
+  background-color: #000;
   margin: 0 auto;
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
 }
 
 .nav-header {
-  background-color: #fff;
+  background-color: #000;
   box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+#navbarNav {
+  background-color: #000;
+}
+
+.list-inline-item {
+  background-color: none;
+  height: 100%;
+  padding: 10px 0;
+  text-align: center;
 }
 
 .alert {
   z-index: 100;
   position: absolute;
-  top: 70px;
+  top: 62px;
   left: 0;
   width: 100%;
   text-align: center;
@@ -94,24 +119,204 @@ body {
 
 .hero-img-container {
   position: absolute;
-  top: 70px;
+  top: 62px;
   left: 0;
-  background: url('/media/ski-hp-image.jpg') no-repeat center center;
+  background: url('/media/ski-hp-image2.jpg') no-repeat 50% 40%;
   background-size: cover;
-  height: calc(100vh - 70px);
+  height: 100vh;
   width: 100%;
   z-index: -100;
 }
 
 .hero-img {
-  height: calc(100vh - 70px);
+  height: 100vh;
+}
+
+.hero-title {
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.hero-text {
+  font-weight: 700;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 62px;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 3%, rgba(0, 0, 0, 0.2) 71%, transparent);
+}
+
+.hp-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+}
+
+.hp-buttons h4 {
+  margin: 20px 5px 0;
+}
+
+.shop-now-button {
+  background-color: #fff;
+  color: #000;
+  width: 200px;
+  margin: 0 auto;
 }
 
 .join-card {
-  background-color: rgba(0, 123, 255, 0.5);
-  box-shadow: 1px 3px 3px 2px rgba(0, 0, 0, 0.2);
+  background-color: rgb(91, 170, 255);
   border: none;
   border-radius: 0;
+}
+
+.join-title {
+  font-size: 1.5rem;
+}
+
+.join-text {
+  font-size: 1.125rem;
+}
+
+.btn-join {
+  min-width: 200px;
+  background-color: #fff;
+  color: #000;
+}
+
+.btn-join:hover,
+.btn-join:active,
+.btn-join:focus {
+  background: #222;
+  color: white;
+}
+
+.services-section {
+  background-color: rgb(235, 235, 235);
+  padding: 60px 0;
+}
+
+.social-section {
+  background-color: rgb(255, 255, 255);
+  padding: 30px 0;
+}
+
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  padding: 0;
+}
+
+.social-text {
+  font-size: 1.125rem;
+}
+
+.grid-item {
+  list-style: none;
+  border: 3px solid #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.grid-item:after {
+  content: '';
+  display: block;
+  padding-bottom: 100%;
+}
+
+.grid-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.2s linear;
+}
+
+.grid-overlay:hover {
+  opacity: 1;
+}
+
+.grid-item:hover,
+.grid-item:active,
+.grid-item:focus {
+  background-color: #000;
+}
+
+.grid-tag {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.item-1 {
+  background-image: url('/media/ski-boots.jpg');
+}
+.item-2 {
+  background-image: url('/media/ski-edge.jpg');
+}
+.item-3 {
+  background-image: url('/media/ski-hp-image.jpg');
+}
+.item-4 {
+  background-image: url('/media/ski-hp-image2.jpg');
+}
+.item-5 {
+  background-image: url('/media/ski-mount.jpg');
+}
+.item-6 {
+  background-image: url('/media/ski-rentals.jpg');
+}
+.item-7 {
+  background-image: url('/media/ski-repair.jpg');
+}
+.item-8 {
+  background-image: url('/media/ski-tuning.jpg');
+}
+.item-9 {
+  background-image: url('/media/ski-wax.jpg');
+}
+.item-10 {
+  background-image: url('/media/jr-ski-rental.jpg');
+}
+
+.contact-section {
+  background-color: #007bff;
+}
+
+.fa-arrow-right {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-card,
+.contact-card .card-body,
+.card-footer {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.contact-card:hover {
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .navbar-toggler-icon {
@@ -128,8 +333,8 @@ body {
 }
 
 .logo-font {
-  text-transform: uppercase;
-  color: #007bff;
+  font-family: 'Playfair Display SC', serif;
+  font-weight: 900;
 }
 
 .card-img-top {
@@ -139,12 +344,14 @@ body {
 }
 
 .service-container {
-  margin-top: calc(70px + 10vh);
+  margin-top: 50px;
 }
 
 .cart-container {
-  margin-top: 140px;
+  padding-top: 100px;
+  padding-bottom: 100px;
   height: 100%;
+  background-color: #fff;
 }
 
 /* from Bulma */
@@ -163,12 +370,6 @@ body {
 .update-link,
 .remove-link {
   cursor: pointer;
-}
-
-.shop-now-button {
-  background: black;
-  color: white;
-  min-width: 260px;
 }
 
 .btn-black {
@@ -190,11 +391,46 @@ body {
   color: #000 !important;
 }
 
+.text-white {
+  color: #fff !important;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
 .border-black {
   border: 1px solid black !important;
 }
 
 /* Allauth form formatting */
+
+.user-btn {
+  width: 200px;
+  background-color: #17a2b8 !important;
+  color: #fff;
+  display: block;
+  padding: 15px 0 !important;
+  text-align: center;
+  border: none !important;
+  transition: 0.2s linear;
+}
+
+.all-auth-row {
+  min-height: 50vh;
+}
+
+.user-btn:hover,
+.user-btn:active,
+.user-btn:focus {
+  text-decoration: none;
+  background-color: #117888 !important;
+  color: #fff;
+}
 
 .allauth-form-inner-content p {
   margin-top: 1.5rem; /* mt-4 */
@@ -249,7 +485,6 @@ body {
   color: #17a2b8; /* text-info */
 }
 
-
 /* Product Form */
 
 .btn-file {
@@ -257,7 +492,7 @@ body {
   overflow: hidden;
 }
 
-.btn-file input[type="file"] {
+.btn-file input[type='file'] {
   position: absolute;
   top: 0;
   right: 0;
@@ -272,12 +507,95 @@ body {
   border-color: #dc3545;
 }
 
-.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
   background-color: #dc3545;
   border-color: #dc3545;
   border-radius: 0;
 }
 
+/* -------------------------------- SERVICES PAGE */
+
+.service-deck {
+  flex-wrap: wrap;
+}
+
+.service-header {
+  padding-top: 15vh;
+  margin-bottom: 40px;
+}
+
+.service-card {
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  width: 300px;
+  margin: 0 auto;
+  transition: 0.2s linear;
+}
+
+.service-card:hover {
+  box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.1);
+}
+
+.service-link:hover {
+  text-decoration: none;
+}
+
+.square-img {
+  width: 300px;
+  list-style: none;
+  border: 3px solid #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.square-img:after {
+  content: '';
+  display: block;
+  padding-bottom: 100%;
+}
+
+/* -------------------------------- SERVICE DETAILS */
+
+.service-detail-bg {
+  background-color: #fff;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.service-detail-info {
+  text-align: center;
+}
+
+.form {
+  text-align: center;
+}
+
+.detail-select,
+.qty_detail {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.image-container {
+  width: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.image-container:after {
+  content: '';
+  display: block;
+  padding-bottom: 100%;
+}
+
+.service-detail-title {
+  font-size: 1.5rem;
+}
 
 /* -------------------------------- Media Queries */
 
@@ -298,7 +616,289 @@ body {
     z-index: 1030;
   }
 
-  .header-container {
-    padding-top: 164px;
+  .nav-header {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+  }
+
+  .list-inline-item {
+    padding: 0;
+    text-align: left;
+    border-bottom: solid 2px transparent;
+    transition: 0.1s ease-in;
+  }
+
+  .list-inline-item:hover {
+    border-bottom: #50a9f1 2px solid;
+  }
+
+  .alert {
+    z-index: 100;
+    position: absolute;
+    top: 62px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    border-radius: 0;
+  }
+
+  .hero-img-container {
+    height: 90vh;
+  }
+
+  .hero-img {
+    height: 90vh;
+    margin-bottom: 100px;
+  }
+
+  .hero-text {
+    margin-top: 0;
+    text-align: left;
+    font-size: 4rem;
+  }
+
+  .hero-overlay {
+    height: 90vh;
+  }
+
+  .join-title {
+    font-size: 2rem;
+  }
+
+  .social-grid {
+    grid-template-columns: repeat(5, 20%);
+  }
+
+  .hp-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+  }
+
+  .hp-buttons h4 {
+    margin: 20px 5px 0;
+  }
+
+  .shop-now-button {
+    background-color: #fff;
+    color: #000;
+    width: 200px;
+    margin: 0 auto;
+  }
+
+  .navbar-toggler-icon {
+    color: #007bff;
+    height: 100%;
+  }
+  .footer {
+    background-color: gainsboro;
+  }
+
+  .icon-medium {
+    font-size: 20px;
+    color: #000;
+  }
+
+  .logo-font {
+    font-family: 'Playfair Display SC', serif;
+    font-weight: 700;
+  }
+
+  .card-img-top {
+    width: 100%;
+    height: 20vw;
+    object-fit: cover;
+  }
+
+  .service-container {
+    margin-top: 50px;
+  }
+
+  .cart-container {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    height: 100%;
+    background-color: #fff;
+  }
+
+  /* from Bulma */
+  .icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+
+  .main-logo-link {
+    width: fit-content;
+  }
+
+  .update-link,
+  .remove-link {
+    cursor: pointer;
+  }
+
+  .btn-black {
+    background: black;
+    color: white;
+  }
+
+  .shop-now-button:hover,
+  .shop-now-button:active,
+  .shop-now-button:focus,
+  .btn-black:hover,
+  .btn-black:active,
+  .btn-black:focus {
+    background: #222;
+    color: white;
+  }
+
+  .text-black {
+    color: #000 !important;
+  }
+
+  .text-white {
+    color: #fff !important;
+  }
+
+  .text-bold {
+    font-weight: 700;
+  }
+
+  .text-uppercase {
+    text-transform: uppercase;
+  }
+
+  .border-black {
+    border: 1px solid black !important;
+  }
+
+  /* Allauth form formatting */
+  .bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    z-index: -50;
+  }
+
+  .allauth-form-inner-content p {
+    margin-top: 1.5rem; /* mt-4 */
+    color: #6c757d; /* text-secondary */
+  }
+
+  .allauth-form-inner-content input {
+    border-color: #000;
+    border-radius: 0;
+  }
+
+  .allauth-form-inner-content label:not([for='id_remember']) {
+    display: none;
+  }
+
+  .allauth-form-inner-content input::placeholder {
+    color: #aab7c4;
+  }
+
+  .allauth-form-inner-content button,
+  .allauth-form-inner-content input[type='submit'] {
+    /* btn */
+    display: inline-block;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #000;
+    border: 1px solid #000;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0;
+
+    /* standard bootstrap btn transitions */
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+
+  .allauth-form-inner-content button:hover,
+  .allauth-form-inner-content input[type='submit']:hover {
+    color: #fff;
+    background-color: #222;
+    border-color: #222;
+  }
+
+  .allauth-form-inner-content a {
+    color: #17a2b8; /* text-info */
+  }
+
+  /* Product Form */
+
+  .btn-file {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-file input[type='file'] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .custom-checkbox .custom-control-label::before {
+    border-radius: 0;
+    border-color: #dc3545;
+  }
+
+  .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    border-radius: 0;
+  }
+
+  /* -------------------------------- RENTALS PAGE */
+
+  .service-card {
+    width: 400px;
+  }
+
+  .square-img {
+    width: 400px;
+  }
+
+  /* -------------------------------- SERVICE DETAILS */
+
+  .service-detail-info {
+    text-align: left;
+  }
+
+  .form {
+    text-align: left;
+  }
+
+  .detail-select,
+  .qty_detail {
+    margin: 0;
+    width: 60%;
+  }
+
+  .image-container {
+    width: 500px;
+  }
+
+  .service-detail-title {
+    font-size: 2rem;
   }
 }

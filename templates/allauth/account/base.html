@@ -1,9 +1,23 @@
 {% extends "base.html" %} {% block content %}
+<div class="bg-overlay"></div>
 <div class="container header-container">
-  <div class="row">
-    <div class="col-12 col-md-6">
+  <div class="row mb-5 all-auth-row align-content-center">
+    <div class="col-12 col-md-6 mx-auto">
       <div class="allauth-form-inner-content">{% block inner_content %} {% endblock %}</div>
     </div>
+    {% if request.get_full_path == "/accounts/login/" %}
+    <div class="col-12 col-md-6 mx-auto">
+      <h2 class="logo-font mb-4">New Customer?</h2>
+
+      <p>
+        By creating an account with our store, you will be able to move through the checkout process
+        faster, store multiple shipping addresses, view and track your orders in your account and
+        more.
+      </p>
+
+      <a href="{{ signup_url }}" class="sign-up-btn user-btn">Sign Up</a>
+    </div>
+    {% endif %}
   </div>
 </div>
 {% endblock %}

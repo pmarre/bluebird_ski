@@ -3,6 +3,7 @@
 {% endblock %}
 <!--  -->
 {% block content %}
+<div class="bg-overlay"></div>
 <div class="container cart-container">
   <div class="row mb-2">
     <div class="col">
@@ -25,13 +26,15 @@
           <tr>
             <td class="p-3 w-25">
               {% if item.service.image %}
-              <img src="https://bluebird-ski-shop.s3-us-west-1.amazonaws.com/media/{{item.service.image}}" alt="" class="w-100" />
+              <img src="/media/{{item.service.image}}" alt="{{service.name}}" class="w-100" />
               {% else %}
-              <img src="https://bluebird-ski-shop.s3-us-west-1.amazonaws.com/media/ski-edge.jpg" alt="" class="w-100" />
+              <img src="/media/ski-edge.jpg" alt="{{service.name}}" class="w-100" />
               {% endif %}
             </td>
             <td class="py-3">
-              <p class="my-0"><strong>{{item.service.name}}</strong></p>
+              <p class="my-0 service-detail-title logo-font">
+                <strong>{{item.service.name}}</strong>
+              </p>
               {% if item.service.has_sizes %}
               <p class="my-0 small"><strong>Boot Size: </strong>{{item.boot_size}}</p>
               <p class="my-0 small"><strong>Ski Size: </strong>{{item.ski_size}} cm</p>
@@ -48,7 +51,7 @@
                 action="{% url 'adjust_cart' item.item_id%}"
               >
                 {% csrf_token%}
-                <div class="form-group">
+                <div class="form-group w-50">
                   <div class="input-group">
                     <div class="input-group-prepend">
                       <button
@@ -88,13 +91,15 @@
                   </div>
                 </div>
               </form>
-              <a class="update-link text-info"><small>Update</small></a>
-              <a
-                class="remove-link remove-item text-danger float-right"
-                id="remove_{{ item.item_id }}"
-                data-size="{{ item.size }}"
-                ><small>Remove</small></a
-              >
+              <div class="w-50">
+                <a class="update-link text-info"><small>Update</small></a>
+                <a
+                  class="remove-link remove-item text-danger float-right"
+                  id="remove_{{ item.item_id }}"
+                  data-size="{{ item.size }}"
+                  ><small>Remove</small></a
+                >
+              </div>
             </td>
             <td class="py-3">
               <p class="my-0">${{item.service.price | calc_subtotal:item.quantity }}</p>

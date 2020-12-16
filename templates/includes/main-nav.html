@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg main-nav">
   <div class="container-fluid">
-    <h2 class="logo-font text-black align-middle">
-      <a href="{% url 'home' %}" class="navbar-brand nav-link main-logo-link p-0"
+    <h2 class="logo-font align-middle">
+      <a href="{% url 'home' %}" class="navbar-brand nav-link main-logo-link p-0 text-white"
         >Bluebird Ski Shop</a
       >
     </h2>
@@ -19,10 +19,13 @@
       ></span>
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <div class="my-auto py-1 py-lg-0 bg-white">
+      <div class="my-auto py-1 py-lg-0">
         <ul class="navbar-nav nav justify-content-end w-100">
           <li class="list-inline-item mx-3">
-            <a class="text-black nav-link p-0" href="{% url 'services' %}?category=rentals">
+            <a
+              class="text-white nav-link p-0 text-uppercase"
+              href="{% url 'services' %}?category=rentals"
+            >
               <div clas="text-center">
                 <p class="my-0">Rentals</p>
               </div>
@@ -30,7 +33,7 @@
           </li>
           <li class="list-inline-item dropdown mx-3">
             <a
-              class="text-black nav-link p-0"
+              class="text-white nav-link p-0 text-uppercase"
               href="#"
               id="user-options"
               data-toggle="dropdown"
@@ -42,20 +45,26 @@
               </div>
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="user-options">
-              <a href="{% url 'services' %}?category=tuning" class="dropdown-item">Tuning</a>
-              <a href="{% url 'services' %}?category=repairs" class="dropdown-item">Repairs</a>
-              <a href="{% url 'services' %}?category=mounting" class="dropdown-item"
+              <a href="{% url 'services' %}?category=tuning" class="dropdown-item text-uppercase"
+                >Tuning</a
+              >
+              <a href="{% url 'services' %}?category=repairs" class="dropdown-item text-uppercase"
+                >Repairs</a
+              >
+              <a href="{% url 'services' %}?category=mounting" class="dropdown-item text-uppercase"
                 >Binding Mounting</a
               >
-              <a href="{% url 'services' %}?category=bootfitting" class="dropdown-item"
+              <a
+                href="{% url 'services' %}?category=bootfitting"
+                class="dropdown-item text-uppercase"
                 >Boot Fitting</a
               >
-              <a href="{% url 'services' %}" class="dropdown-item">All Services</a>
+              <a href="{% url 'services' %}" class="dropdown-item text-uppercase">All Services</a>
             </div>
           </li>
           <li class="list-inline-item dropdown mx-3">
             <a
-              class="text-black nav-link p-0"
+              class="text-white nav-link p-0 text-uppercase"
               href="#"
               id="user-options"
               data-toggle="dropdown"
@@ -63,30 +72,36 @@
               aria-expanded="false"
             >
               <div clas="text-center">
-                <p class="my-0">My Account</p>
+                {% if request.user.is_authenticated %}
+                <p class="my-0"><i class="far fa-user-circle"></i> My Account</p>
+                {% else %}
+                <p class="my-0"><i class="far fa-user-circle"></i> Login</p>
+                {% endif %}
               </div>
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="user-options">
               {% if request.user.is_authenticated %} {% if request.user.is_superuser %}
-              <a href="{% url 'add_service' %}" class="dropdown-item">Service Management</a>
+              <a href="{% url 'add_service' %}" class="dropdown-item text-uppercase"
+                >Service Management</a
+              >
               {% endif %}
-              <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-              <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+              <a href="{% url 'profile' %}" class="dropdown-item text-uppercase">My Profile</a>
+              <a href="{% url 'account_logout' %}" class="dropdown-item text-uppercase">Logout</a>
               {% else %}
-              <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-              <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+              <a href="{% url 'account_signup' %}" class="dropdown-item text-uppercase">Register</a>
+              <a href="{% url 'account_login' %}" class="dropdown-item text-uppercase">Login</a>
               {% endif %}
             </div>
           </li>
           <li class="list-inline-item mx-3">
             <a
-              class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link p-0"
+              class="{% if grand_total %}text-info font-weight-bold{% else %}text-white{% endif %} nav-link p-0"
               href="{% url 'view_cart' %}"
             >
               <div>
-                <p class="my-0">
-                  {% if grand_total %} ${{ grand_total|floatformat:2 }} {% else %} $0.00
-
+                <p class="my-0 text-uppercase">
+                  <i class="fas fa-shopping-cart"></i>
+                  My Cart {% if grand_total %} ${{ grand_total|floatformat:2 }} {% else %} $0.00
                   <!--  -->
                   {% endif %}
                 </p>
