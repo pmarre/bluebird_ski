@@ -6,7 +6,7 @@ font-family: 'Yanone Kaffeesatz', sans-serif;
 */
 
 html {
-  height: 100%;
+  height: auto;
   width: 100%;
 }
 
@@ -15,7 +15,21 @@ body {
   font-family: 'Yanone Kaffeesatz', sans-serif;
   background-color: #000;
   overflow-x: hidden;
-  height: 100%;
+  height: auto;
+}
+
+.bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: #fff;
+  z-index: -50;
+}
+
+.bg-form {
+  background-color: #fff;
 }
 
 .message-container {
@@ -23,6 +37,11 @@ body {
   top: 72px;
   right: 15px;
   z-index: 99999999999;
+}
+
+.header-container {
+  height: 62px;
+  margin-bottom: 40px;
 }
 
 .custom-toast {
@@ -597,6 +616,23 @@ body {
   font-size: 1.5rem;
 }
 
+.add-service-container,
+.edit-service-container {
+  height: auto;
+  padding-bottom: 40px;
+}
+
+/* -------------------------------- PROFILE PAGE */
+
+.profile-info {
+  height: auto;
+  background-color: #fff;
+}
+
+.order-history {
+  background-color: #fff;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -777,15 +813,6 @@ body {
   }
 
   /* Allauth form formatting */
-  .bg-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: #fff;
-    z-index: -50;
-  }
 
   .allauth-form-inner-content p {
     margin-top: 1.5rem; /* mt-4 */
@@ -895,7 +922,7 @@ body {
   }
 
   .image-container {
-    width: 500px;
+    width: 100%;
   }
 
   .service-detail-title {
