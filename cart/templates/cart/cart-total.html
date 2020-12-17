@@ -1,0 +1,5 @@
+<h6><strong>Cart Total: ${{ total|floatformat:2 }}</strong></h6>
+{% if request.user.is_authenticated %}
+<h6>Member discount: -${{ discount|floatformat:2 }}</h6>
+{% endif %}
+<h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>

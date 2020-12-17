@@ -52,7 +52,7 @@
     {% else %}
     <div class="alert alert-info alert-dismissible fade show" role="alert">
       <strong>Save 10%!</strong> Enjoy instant savings when you become a Bluebird member.
-      <a href="#">Join now!</a>
+      <a href="{ url 'account_signup' }">Join now!</a>
       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </button>
@@ -81,38 +81,42 @@
     <section class="contact-section py-5" id="contact">
       <div class="container">
         <div class="row">
-          <div class="card-group mx-auto">
-            <a href="#" class="card contact-card mx-1 d-flex">
+          <div class="card-deck mx-auto">
+            <div class="card contact-card mx-1 d-flex">
               <div class="card-body">
                 <h4 class="card-title text-white text-center text-uppercase">Have questions?</h4>
-                <p class="card-text text-white text-center">Contact us for assistance</p>
+                <p class="card-text text-white text-center">
+                  Contact us for assistance at 1-800-555-5555
+                </p>
               </div>
-              <div class="card-footer">
-                <i class="text-white text-center fas fa-arrow-right"></i>
+              <div class="card-footer mx-auto">
+                <i class="text-white text-center far fa-check-circle"></i>
               </div>
-            </a>
-            <a href="#" class="card contact-card mx-1">
+            </div>
+            <div class="card contact-card mx-1">
               <div class="card-body contact-card">
                 <h4 class="card-title text-white text-center text-uppercase">
                   Bluebird Return Policy
                 </h4>
-                <p class="card-text text-white text-center">Bluebird Return Policy</p>
+                <p class="card-text text-white text-center">
+                  No questions asked, hassle-free returns
+                </p>
               </div>
-              <div class="card-footer">
-                <i class="text-white text-center fas fa-arrow-right"></i>
+              <div class="card-footer mx-auto">
+                <i class="text-white text-center far fa-check-circle"></i>
               </div>
-            </a>
-            <a href="#" class="card contact-card mx-1">
+            </div>
+            <div class="card contact-card mx-1">
               <div class="card-body">
                 <h4 class="card-title text-white text-center text-uppercase">Quality Warranty</h4>
                 <p class="card-text text-white text-center">
-                  All services are protected with by a warranty (varies depending on service)
+                  All services are protected with by a warranty (length varies depending on service)
                 </p>
               </div>
-              <div class="card-footer">
-                <i class="text-white text-center fas fa-arrow-right"></i>
+              <div class="card-footer mx-auto">
+                <i class="text-white text-center far fa-check-circle"></i>
               </div>
-            </a>
+            </div>
           </div>
         </div>
       </div>

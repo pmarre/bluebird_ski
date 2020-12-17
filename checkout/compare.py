@@ -4,7 +4,7 @@ from django.template.loader import render_to_string
 from django.conf import settings
 
 from .models import Order, OrderLineItem
-from services.models import Service
+from products.models import Product
 from profiles.models import UserProfile
 
 import json
@@ -31,8 +31,7 @@ class StripeWH_Handler:
             subject,
             body,
             settings.DEFAULT_FROM_EMAIL,
-            [cust_email],
-            fail_silently=False,
+            [cust_email]
         )
 
     def handle_event(self, event):
@@ -49,7 +48,7 @@ class StripeWH_Handler:
         """
         intent = event.data.object
         pid = intent.id
-        cart = intent.metadata.cart
+        bag = intent.metadata.bag
         save_info = intent.metadata.save_info
 
         billing_details = intent.charges.data[0].billing_details
@@ -91,7 +90,7 @@ class StripeWH_Handler:
                     street_address2__iexact=shipping_details.address.line2,
                     county__iexact=shipping_details.address.state,
                     grand_total=grand_total,
-                    original_cart=cart,
+                    original_bag=bag,
                     stripe_pid=pid,
                 )
                 order_exists = True
@@ -102,7 +101,8 @@ class StripeWH_Handler:
         if order_exists:
             self._send_confirmation_email(order)
             return HttpResponse(
-                content=f'Webhook received: {event["type"]} | SUCCESS: Verified order already in database',
+                content=(f'Webhook received: {event["type"]} | SUCCESS: '
+                         'Verified order already in database'),
                 status=200)
         else:
             order = None
@@ -118,27 +118,25 @@ class StripeWH_Handler:
                     street_address1=shipping_details.address.line1,
                     street_address2=shipping_details.address.line2,
                     county=shipping_details.address.state,
-                    original_cart=cart,
+                    original_bag=bag,
                     stripe_pid=pid,
                 )
-                for item_id, item_data in json.loads(cart).items():
-                    service = Service.objects.get(id=item_id)
+                for item_id, item_data in json.loads(bag).items():
+                    product = Product.objects.get(id=item_id)
                     if isinstance(item_data, int):
                         order_line_item = OrderLineItem(
                             order=order,
-                            service=service,
+                            product=product,
                             quantity=item_data,
                         )
                         order_line_item.save()
                     else:
                         for size, quantity in item_data['items_by_size'].items():
-                            size = size.split(',')
                             order_line_item = OrderLineItem(
                                 order=order,
-                                service=service,
+                                product=product,
                                 quantity=quantity,
-                                boot_size=size[0],
-                                ski_size=size[1],
+                                product_size=size,
                             )
                             order_line_item.save()
             except Exception as e:
@@ -149,7 +147,8 @@ class StripeWH_Handler:
                     status=500)
         self._send_confirmation_email(order)
         return HttpResponse(
-            content=f'Webhook received: {event["type"]} | SUCCESS: Created order in webhook',
+            content=(f'Webhook received: {event["type"]} | SUCCESS: '
+                     'Created order in webhook'),
             status=200)
 
     def handle_payment_intent_payment_failed(self, event):

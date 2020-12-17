@@ -9,6 +9,7 @@ import stripe
 
 # stripe part 11 for webhooks with public domain address
 
+
 @require_POST
 @csrf_exempt
 def webhook(request):

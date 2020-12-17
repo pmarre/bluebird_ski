@@ -1,67 +1,67 @@
 {% extends 'base.html' %} {% load static %} {% block page_header %}
-<div class="hero-img-container"></div>
-<div class="header-container container">
+<div class="header-container container mb-0">
   <div class="row">
     <div class="col"></div>
   </div>
 </div>
 {% endblock %} {% block content %}
-<div class="container hero-img">
-  <div class="hero-overlay"></div>
-  <div class="row justify-content-center align-content-center h-100">
-    <div class="col-sm-10 offset-sm-1 offset-md-0 col-md-6 my-auto">
-      <h1 class="hero-text text-white text-center mb-0">The ski season is here.</h1>
-      <h1 class="hero-text text-white text-center mt-0">Are you ready?</h1>
-    </div>
-
-    <div class="row w-100 mx-0 justify-content-center">
-      <div class="col-sm-12 col-md-5">
-        <div class="row justify-content-center d-flex hp-buttons">
-          <h4>
-            <a
-              href="{% url 'services' %}?category=rentals"
-              class="d-block shop-now-button btn btn-lg rounded-0 text-uppercased py-3 m-auto"
-              >Rentals</a
-            >
-          </h4>
-          <h4>
-            <a
-              href="{% url 'services' %}"
-              class="d-block shop-now-button btn btn-lg rounded-0 text-uppercased py-3 m-auto"
-              >Services</a
-            >
-          </h4>
+<div class="hero-img-container">
+  <div class="hero-img">
+    <div class="hero-overlay"></div>
+    <div class="row justify-content-center align-content-center h-100 w-100">
+      <div class="col-sm-10 offset-sm-1 offset-md-0 col-md-6 my-auto">
+        <h1 class="hero-text text-white text-center mb-0">The ski season is here.</h1>
+        <h1 class="hero-text text-white text-center mt-0">Are you ready?</h1>
+      </div>
+      <div class="row w-100 mx-0 justify-content-center">
+        <div class="col-sm-12 col-md-5">
+          <div class="row justify-content-center d-flex hp-buttons">
+            <h4>
+              <a
+                href="{% url 'services' %}?category=rentals"
+                class="d-block shop-now-button btn btn-lg rounded-0 text-uppercased py-3 m-auto"
+                >Rentals</a
+              >
+            </h4>
+            <h4>
+              <a
+                href="{% url 'services' %}"
+                class="d-block shop-now-button btn btn-lg rounded-0 text-uppercased py-3 m-auto"
+                >Services</a
+              >
+            </h4>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-<div class="container sign-up-card mt-sm-5 mt-md-0">
-  {% if request.user.is_authenticated %}
-  <div class="d-none"></div>
-  {% else %}
-  <div class="card text-center mb-5 join-card">
-    <div class="svg-container">
-      <img
-        src="https://bluebird-ski-shop.s3-us-west-1.amazonaws.com/media/san_francisco.svg"
-        alt="San Francisco"
-      />
+<section class="join-section py-5">
+  <div class="container sign-up-card mt-sm-5 mt-md-0">
+    {% if request.user.is_authenticated %}
+    <div class="d-none"></div>
+    {% else %}
+    <div class="card text-center mb-5 join-card">
+      <div class="svg-container">
+        <img
+          src="https://bluebird-ski-shop.s3-us-west-1.amazonaws.com/media/san_francisco.svg"
+          alt="San Francisco"
+        />
+      </div>
+      <div class="card-body">
+        <h5 class="card-title text-white text-uppercase text-bold logo-font join-title">
+          Join the Bluebird Family and save
+        </h5>
+        <p class="card-text text-white join join-text">
+          By signing up to be a Bluebird Ski Shop member you save 10% on all purchases, services,
+          and rentals!
+        </p>
+        <a href="{% url 'account_signup' %}" class="btn btn-join rounded-0">Join Now</a>
+      </div>
     </div>
-    <div class="card-body">
-      <h5 class="card-title text-white text-uppercase text-bold logo-font join-title">
-        Join the Bluebird Family and save
-      </h5>
-      <p class="card-text text-white join join-text">
-        By signing up to be a Bluebird Ski Shop member you save 10% on all purchases, services, and
-        rentals!
-      </p>
-      <a href="#" class="btn btn-join rounded-0">Join Now</a>
-    </div>
+    {% endif %}
   </div>
-  {% endif %}
-</div>
-
+</section>
 <section class="services-section" id="services">
   <div class="container">
     <div class="row mb-5">
@@ -70,47 +70,32 @@
       </div>
       <div class="card-deck">
         <div class="card">
-          <img
-            src="https://bluebird-ski-shop.s3-us-west-1.amazonaws.com/media/mountains.svg"
-            class="card-img-top"
-            alt="..."
-          />
+          <img src="/media/san_fran.jpg" class="card-img-top" alt="San Francisco" />
           <div class="card-body">
             <h5 class="card-title text-uppercase text-black">San Francisco</h5>
             <p class="card-text">
               Our HQ and first store. Built to bring the mountains closer to you.
             </p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
           </div>
         </div>
         <div class="card">
-          <img
-            src="https://bluebird-ski-shop.s3-us-west-1.amazonaws.com/media/mountains.svg"
-            class="card-img-top"
-            alt="..."
-          />
+          <img src="/media/tahoe.jpg" class="card-img-top" alt="Tahoe" />
           <div class="card-body">
             <h5 class="card-title text-uppercase text-black">Tahoe City</h5>
             <p class="card-text">
               Whether you are looking to get your skis ready for the season or just looking for a
               cup of our famous Bluebird Coffee, stop by anytime!
             </p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
           </div>
         </div>
         <div class="card">
-          <img
-            src="https://bluebird-ski-shop.s3-us-west-1.amazonaws.com/media/mountains.svg"
-            class="card-img-top"
-            alt="..."
-          />
+          <img src="/media/bishop.jpg" class="card-img-top" alt="Bishop" />
           <div class="card-body">
             <h5 class="card-title text-uppercase text-black">Bishop</h5>
             <p class="card-text">
               Built in the middle of the Sierras so you always have access to the gear you need,
               when you need it.
             </p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
           </div>
         </div>
       </div>

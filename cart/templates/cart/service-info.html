@@ -1,0 +1,8 @@
+<p class="my-0 service-detail-title logo-font">
+  <strong>{{item.service.name}}</strong>
+</p>
+{% if item.service.has_sizes %}
+<p class="my-0 small"><strong>Boot Size: </strong>{{item.boot_size}}</p>
+<p class="my-0 small"><strong>Ski Size: </strong>{{item.ski_size}} cm</p>
+{% endif %}
+<p class="my-0 small text-muted">SKU: {{ item.service.sku|upper }}</p>

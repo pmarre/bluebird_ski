@@ -1,0 +1,13 @@
+{% if item.service.image %}
+<img
+  src="https://bluebird-ski-shop.s3-us-west-1.amazonaws.com/media/{{item.service.image}}"
+  alt="{{item.service.name}}"
+  class="w-100"
+/>
+{% else %}
+<img
+  src="https://bluebird-ski-shop.s3-us-west-1.amazonaws.com/media/{{item.service.image}}"
+  alt="{{item.service.name}}"
+  class="w-100"
+/>
+{% endif %}
