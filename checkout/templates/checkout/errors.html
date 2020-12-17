@@ -1,0 +1,2734 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="robots" content="NONE,NOARCHIVE" />
+    <title>TemplateDoesNotExist at /checkout/wh/</title>
+    <style type="text/css">
+      html * {
+        padding: 0;
+        margin: 0;
+      }
+      body * {
+        padding: 10px 20px;
+      }
+      body * * {
+        padding: 0;
+      }
+      body {
+        font: small sans-serif;
+        background-color: #fff;
+        color: #000;
+      }
+      body > div {
+        border-bottom: 1px solid #ddd;
+      }
+      h1 {
+        font-weight: normal;
+      }
+      h2 {
+        margin-bottom: 0.8em;
+      }
+      h3 {
+        margin: 1em 0 0.5em 0;
+      }
+      h4 {
+        margin: 0 0 0.5em 0;
+        font-weight: normal;
+      }
+      code,
+      pre {
+        font-size: 100%;
+        white-space: pre-wrap;
+      }
+      table {
+        border: 1px solid #ccc;
+        border-collapse: collapse;
+        width: 100%;
+        background: white;
+      }
+      tbody td,
+      tbody th {
+        vertical-align: top;
+        padding: 2px 3px;
+      }
+      thead th {
+        padding: 1px 6px 1px 3px;
+        background: #fefefe;
+        text-align: left;
+        font-weight: normal;
+        font-size: 11px;
+        border: 1px solid #ddd;
+      }
+      tbody th {
+        width: 12em;
+        text-align: right;
+        color: #666;
+        padding-right: 0.5em;
+      }
+      table.vars {
+        margin: 5px 0 2px 40px;
+      }
+      table.vars td,
+      table.req td {
+        font-family: monospace;
+      }
+      table td.code {
+        width: 100%;
+      }
+      table td.code pre {
+        overflow: hidden;
+      }
+      table.source th {
+        color: #666;
+      }
+      table.source td {
+        font-family: monospace;
+        white-space: pre;
+        border-bottom: 1px solid #eee;
+      }
+      ul.traceback {
+        list-style-type: none;
+        color: #222;
+      }
+      ul.traceback li.frame {
+        padding-bottom: 1em;
+        color: #4f4f4f;
+      }
+      ul.traceback li.user {
+        background-color: #e0e0e0;
+        color: #000;
+      }
+      div.context {
+        padding: 10px 0;
+        overflow: hidden;
+      }
+      div.context ol {
+        padding-left: 30px;
+        margin: 0 10px;
+        list-style-position: inside;
+      }
+      div.context ol li {
+        font-family: monospace;
+        white-space: pre;
+        color: #777;
+        cursor: pointer;
+        padding-left: 2px;
+      }
+      div.context ol li pre {
+        display: inline;
+      }
+      div.context ol.context-line li {
+        color: #464646;
+        background-color: #dfdfdf;
+        padding: 3px 2px;
+      }
+      div.context ol.context-line li span {
+        position: absolute;
+        right: 32px;
+      }
+      .user div.context ol.context-line li {
+        background-color: #bbb;
+        color: #000;
+      }
+      .user div.context ol li {
+        color: #666;
+      }
+      div.commands {
+        margin-left: 40px;
+      }
+      div.commands a {
+        color: #555;
+        text-decoration: none;
+      }
+      .user div.commands a {
+        color: black;
+      }
+      #summary {
+        background: #ffc;
+      }
+      #summary h2 {
+        font-weight: normal;
+        color: #666;
+      }
+      #explanation {
+        background: #eee;
+      }
+      #template,
+      #template-not-exist {
+        background: #f6f6f6;
+      }
+      #template-not-exist ul {
+        margin: 0 0 10px 20px;
+      }
+      #template-not-exist .postmortem-section {
+        margin-bottom: 3px;
+      }
+      #unicode-hint {
+        background: #eee;
+      }
+      #traceback {
+        background: #eee;
+      }
+      #requestinfo {
+        background: #f6f6f6;
+        padding-left: 120px;
+      }
+      #summary table {
+        border: none;
+        background: transparent;
+      }
+      #requestinfo h2,
+      #requestinfo h3 {
+        position: relative;
+        margin-left: -100px;
+      }
+      #requestinfo h3 {
+        margin-bottom: -1em;
+      }
+      .error {
+        background: #ffc;
+      }
+      .specific {
+        color: #cc3300;
+        font-weight: bold;
+      }
+      h2 span.commands {
+        font-size: 0.7em;
+        font-weight: normal;
+      }
+      span.commands a:link {
+        color: #5e5694;
+      }
+      pre.exception_value {
+        font-family: sans-serif;
+        color: #575757;
+        font-size: 1.5em;
+        margin: 10px 0 10px 0;
+      }
+      .append-bottom {
+        margin-bottom: 10px;
+      }
+      .fname {
+        user-select: all;
+      }
+    </style>
+
+    <script>
+      function hideAll(elems) {
+        for (var e = 0; e < elems.length; e++) {
+          elems[e].style.display = 'none';
+        }
+      }
+      window.onload = function () {
+        hideAll(document.querySelectorAll('table.vars'));
+        hideAll(document.querySelectorAll('ol.pre-context'));
+        hideAll(document.querySelectorAll('ol.post-context'));
+        hideAll(document.querySelectorAll('div.pastebin'));
+      };
+      function toggle() {
+        for (var i = 0; i < arguments.length; i++) {
+          var e = document.getElementById(arguments[i]);
+          if (e) {
+            e.style.display = e.style.display == 'none' ? 'block' : 'none';
+          }
+        }
+        return false;
+      }
+      function varToggle(link, id) {
+        toggle('v' + id);
+        var s = link.getElementsByTagName('span')[0];
+        var uarr = String.fromCharCode(0x25b6);
+        var darr = String.fromCharCode(0x25bc);
+        s.textContent = s.textContent == uarr ? darr : uarr;
+        return false;
+      }
+      function switchPastebinFriendly(link) {
+        s1 = 'Switch to copy-and-paste view';
+        s2 = 'Switch back to interactive view';
+        link.textContent = link.textContent.trim() == s1 ? s2 : s1;
+        toggle('browserTraceback', 'pastebinTraceback');
+        return false;
+      }
+    </script>
+  </head>
+  <body>
+    <div id="summary">
+      <h1>TemplateDoesNotExist at /checkout/wh/</h1>
+      <pre class="exception_value">checkout/confirmation_emails/confirmation_email_subject.txt</pre>
+      <table class="meta">
+        <tr>
+          <th>Request Method:</th>
+          <td>POST</td>
+        </tr>
+        <tr>
+          <th>Request URL:</th>
+          <td>http://c04a41fc3514.ngrok.io/checkout/wh/</td>
+        </tr>
+        <tr>
+          <th>Django Version:</th>
+          <td>3.1.3</td>
+        </tr>
+        <tr>
+          <th>Exception Type:</th>
+          <td>TemplateDoesNotExist</td>
+        </tr>
+        <tr>
+          <th>Exception Value:</th>
+          <td><pre>checkout/confirmation_emails/confirmation_email_subject.txt</pre></td>
+        </tr>
+        <tr>
+          <th>Exception Location:</th>
+          <td>
+            <span class="fname"
+              >/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/template/loader.py</span
+            >, line 19, in get_template
+          </td>
+        </tr>
+        <tr>
+          <th>Python Executable:</th>
+          <td>/Library/Frameworks/Python.framework/Versions/3.8/bin/python3</td>
+        </tr>
+        <tr>
+          <th>Python Version:</th>
+          <td>3.8.5</td>
+        </tr>
+        <tr>
+          <th>Python Path:</th>
+          <td>
+            <pre>
+[&#x27;/Users/patrickmarre/Desktop/class-projects/ms4/bluebird_ski&#x27;,
+ &#x27;/Library/Frameworks/Python.framework/Versions/3.8/lib/python38.zip&#x27;,
+ &#x27;/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8&#x27;,
+ &#x27;/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/lib-dynload&#x27;,
+ &#x27;/Users/patrickmarre/Library/Python/3.8/lib/python/site-packages&#x27;,
+ &#x27;/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages&#x27;]</pre
+            >
+          </td>
+        </tr>
+        <tr>
+          <th>Server time:</th>
+          <td>Thu, 17 Dec 2020 22:57:02 +0000</td>
+        </tr>
+      </table>
+    </div>
+    <div id="template-not-exist">
+      <h2>Template-loader postmortem</h2>
+
+      <p class="append-bottom">Django tried loading these templates, in this order:</p>
+
+      <p class="postmortem-section">Using engine <code>django</code>:</p>
+      <ul>
+        <li>
+          <code>django.template.loaders.filesystem.Loader</code>:
+          /Users/patrickmarre/Desktop/class-projects/ms4/bluebird_ski/templates/checkout/confirmation_emails/confirmation_email_subject.txt
+          (Source does not exist)
+        </li>
+
+        <li>
+          <code>django.template.loaders.filesystem.Loader</code>:
+          /Users/patrickmarre/Desktop/class-projects/ms4/bluebird_ski/templates/allauth/checkout/confirmation_emails/confirmation_email_subject.txt
+          (Source does not exist)
+        </li>
+
+        <li>
+          <code>django.template.loaders.app_directories.Loader</code>:
+          /Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/contrib/admin/templates/checkout/confirmation_emails/confirmation_email_subject.txt
+          (Source does not exist)
+        </li>
+
+        <li>
+          <code>django.template.loaders.app_directories.Loader</code>:
+          /Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/contrib/auth/templates/checkout/confirmation_emails/confirmation_email_subject.txt
+          (Source does not exist)
+        </li>
+
+        <li>
+          <code>django.template.loaders.app_directories.Loader</code>:
+          /Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/allauth/templates/checkout/confirmation_emails/confirmation_email_subject.txt
+          (Source does not exist)
+        </li>
+
+        <li>
+          <code>django.template.loaders.app_directories.Loader</code>:
+          /Users/patrickmarre/Desktop/class-projects/ms4/bluebird_ski/home/templates/checkout/confirmation_emails/confirmation_email_subject.txt
+          (Source does not exist)
+        </li>
+
+        <li>
+          <code>django.template.loaders.app_directories.Loader</code>:
+          /Users/patrickmarre/Desktop/class-projects/ms4/bluebird_ski/services/templates/checkout/confirmation_emails/confirmation_email_subject.txt
+          (Source does not exist)
+        </li>
+
+        <li>
+          <code>django.template.loaders.app_directories.Loader</code>:
+          /Users/patrickmarre/Desktop/class-projects/ms4/bluebird_ski/cart/templates/checkout/confirmation_emails/confirmation_email_subject.txt
+          (Source does not exist)
+        </li>
+
+        <li>
+          <code>django.template.loaders.app_directories.Loader</code>:
+          /Users/patrickmarre/Desktop/class-projects/ms4/bluebird_ski/checkout/templates/checkout/confirmation_emails/confirmation_email_subject.txt
+          (Source does not exist)
+        </li>
+
+        <li>
+          <code>django.template.loaders.app_directories.Loader</code>:
+          /Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/crispy_forms/templates/checkout/confirmation_emails/confirmation_email_subject.txt
+          (Source does not exist)
+        </li>
+
+        <li>
+          <code>django.template.loaders.app_directories.Loader</code>:
+          /Users/patrickmarre/Desktop/class-projects/ms4/bluebird_ski/profiles/templates/checkout/confirmation_emails/confirmation_email_subject.txt
+          (Source does not exist)
+        </li>
+      </ul>
+    </div>
+    <div id="traceback">
+      <h2>
+        Traceback
+        <span class="commands"
+          ><a href="#" onclick="return switchPastebinFriendly(this);">
+            Switch to copy-and-paste view</a
+          ></span
+        >
+      </h2>
+      <div id="browserTraceback">
+        <ul class="traceback">
+          <li class="frame django">
+            <code class="fname"
+              >/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/core/handlers/exception.py</code
+            >, line 47, in inner
+
+            <div class="context" id="c140460709738176">
+              <ol start="40" class="pre-context" id="pre140460709738176">
+                <li onclick="toggle('pre140460709738176', 'post140460709738176')">
+                  <pre>
+                response = await sync_to_async(response_for_exception, thread_sensitive=False)(request, exc)</pre
+                  >
+                </li>
+
+                <li onclick="toggle('pre140460709738176', 'post140460709738176')">
+                  <pre>            return response</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709738176', 'post140460709738176')">
+                  <pre>        return inner</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709738176', 'post140460709738176')">
+                  <pre>    else:</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709738176', 'post140460709738176')">
+                  <pre>        @wraps(get_response)</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709738176', 'post140460709738176')">
+                  <pre>        def inner(request):</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709738176', 'post140460709738176')">
+                  <pre>            try:</pre>
+                </li>
+              </ol>
+
+              <ol start="47" class="context-line">
+                <li onclick="toggle('pre140460709738176', 'post140460709738176')">
+                  <pre>                response = get_response(request)</pre>
+                  <span>…</span>
+                </li>
+              </ol>
+
+              <ol start="48" class="post-context" id="post140460709738176">
+                <li onclick="toggle('pre140460709738176', 'post140460709738176')">
+                  <pre>            except Exception as exc:</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709738176', 'post140460709738176')">
+                  <pre>                response = response_for_exception(request, exc)</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709738176', 'post140460709738176')">
+                  <pre>            return response</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709738176', 'post140460709738176')">
+                  <pre>        return inner</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709738176', 'post140460709738176')"><pre></pre></li>
+
+                <li onclick="toggle('pre140460709738176', 'post140460709738176')"><pre></pre></li>
+              </ol>
+            </div>
+
+            <div class="commands">
+              <a href="#" onclick="return varToggle(this, '140460709738176')"
+                ><span>&#x25b6;</span> Local vars</a
+              >
+            </div>
+            <table class="vars" id="v140460709738176">
+              <thead>
+                <tr>
+                  <th>Variable</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>exc</td>
+                  <td class="code">
+                    <pre>
+TemplateDoesNotExist(&#x27;checkout/confirmation_emails/confirmation_email_subject.txt&#x27;)</pre
+                    >
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>get_response</td>
+                  <td class="code">
+                    <pre>
+&lt;bound method BaseHandler._get_response of &lt;django.core.handlers.wsgi.WSGIHandler object at 0x7fbf8d959580&gt;&gt;</pre
+                    >
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>request</td>
+                  <td class="code">
+                    <pre>&lt;WSGIRequest: POST &#x27;/checkout/wh/&#x27;&gt;</pre>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </li>
+
+          <li class="frame django">
+            <code class="fname"
+              >/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/core/handlers/base.py</code
+            >, line 179, in _get_response
+
+            <div class="context" id="c140460709736896">
+              <ol start="172" class="pre-context" id="pre140460709736896">
+                <li onclick="toggle('pre140460709736896', 'post140460709736896')"><pre></pre></li>
+
+                <li onclick="toggle('pre140460709736896', 'post140460709736896')">
+                  <pre>        if response is None:</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709736896', 'post140460709736896')">
+                  <pre>            wrapped_callback = self.make_view_atomic(callback)</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709736896', 'post140460709736896')">
+                  <pre>            # If it is an asynchronous view, run it in a subthread.</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709736896', 'post140460709736896')">
+                  <pre>            if asyncio.iscoroutinefunction(wrapped_callback):</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709736896', 'post140460709736896')">
+                  <pre>                wrapped_callback = async_to_sync(wrapped_callback)</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709736896', 'post140460709736896')">
+                  <pre>            try:</pre>
+                </li>
+              </ol>
+
+              <ol start="179" class="context-line">
+                <li onclick="toggle('pre140460709736896', 'post140460709736896')">
+                  <pre>
+                response = wrapped_callback(request, *callback_args, **callback_kwargs)</pre
+                  >
+                  <span>…</span>
+                </li>
+              </ol>
+
+              <ol start="180" class="post-context" id="post140460709736896">
+                <li onclick="toggle('pre140460709736896', 'post140460709736896')">
+                  <pre>            except Exception as e:</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709736896', 'post140460709736896')">
+                  <pre>
+                response = self.process_exception_by_middleware(e, request)</pre
+                  >
+                </li>
+
+                <li onclick="toggle('pre140460709736896', 'post140460709736896')">
+                  <pre>                if response is None:</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709736896', 'post140460709736896')">
+                  <pre>                    raise</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709736896', 'post140460709736896')"><pre></pre></li>
+
+                <li onclick="toggle('pre140460709736896', 'post140460709736896')">
+                  <pre>        # Complain if the view returned None (a common error).</pre>
+                </li>
+              </ol>
+            </div>
+
+            <div class="commands">
+              <a href="#" onclick="return varToggle(this, '140460709736896')"
+                ><span>&#x25b6;</span> Local vars</a
+              >
+            </div>
+            <table class="vars" id="v140460709736896">
+              <thead>
+                <tr>
+                  <th>Variable</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>callback</td>
+                  <td class="code"><pre>&lt;function webhook at 0x7fbf8e74baf0&gt;</pre></td>
+                </tr>
+
+                <tr>
+                  <td>callback_args</td>
+                  <td class="code"><pre>()</pre></td>
+                </tr>
+
+                <tr>
+                  <td>callback_kwargs</td>
+                  <td class="code"><pre>{}</pre></td>
+                </tr>
+
+                <tr>
+                  <td>middleware_method</td>
+                  <td class="code">
+                    <pre>
+&lt;bound method CsrfViewMiddleware.process_view of &lt;django.middleware.csrf.CsrfViewMiddleware object at 0x7fbf8d959160&gt;&gt;</pre
+                    >
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>request</td>
+                  <td class="code">
+                    <pre>&lt;WSGIRequest: POST &#x27;/checkout/wh/&#x27;&gt;</pre>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>response</td>
+                  <td class="code"><pre>None</pre></td>
+                </tr>
+
+                <tr>
+                  <td>self</td>
+                  <td class="code">
+                    <pre>
+&lt;django.core.handlers.wsgi.WSGIHandler object at 0x7fbf8d959580&gt;</pre
+                    >
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>wrapped_callback</td>
+                  <td class="code"><pre>&lt;function webhook at 0x7fbf8e74baf0&gt;</pre></td>
+                </tr>
+              </tbody>
+            </table>
+          </li>
+
+          <li class="frame django">
+            <code class="fname"
+              >/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/views/decorators/http.py</code
+            >, line 40, in inner
+
+            <div class="context" id="c140460709738688">
+              <ol start="33" class="pre-context" id="pre140460709738688">
+                <li onclick="toggle('pre140460709738688', 'post140460709738688')">
+                  <pre>                response = HttpResponseNotAllowed(request_method_list)</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709738688', 'post140460709738688')">
+                  <pre>                log_response(</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709738688', 'post140460709738688')">
+                  <pre>
+                    &#x27;Method Not Allowed (%s): %s&#x27;, request.method, request.path,</pre
+                  >
+                </li>
+
+                <li onclick="toggle('pre140460709738688', 'post140460709738688')">
+                  <pre>                    response=response,</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709738688', 'post140460709738688')">
+                  <pre>                    request=request,</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709738688', 'post140460709738688')">
+                  <pre>                )</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709738688', 'post140460709738688')">
+                  <pre>                return response</pre>
+                </li>
+              </ol>
+
+              <ol start="40" class="context-line">
+                <li onclick="toggle('pre140460709738688', 'post140460709738688')">
+                  <pre>            return func(request, *args, **kwargs)</pre>
+                  <span>…</span>
+                </li>
+              </ol>
+
+              <ol start="41" class="post-context" id="post140460709738688">
+                <li onclick="toggle('pre140460709738688', 'post140460709738688')">
+                  <pre>        return inner</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709738688', 'post140460709738688')">
+                  <pre>    return decorator</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709738688', 'post140460709738688')"><pre></pre></li>
+
+                <li onclick="toggle('pre140460709738688', 'post140460709738688')"><pre></pre></li>
+
+                <li onclick="toggle('pre140460709738688', 'post140460709738688')">
+                  <pre>require_GET = require_http_methods([&quot;GET&quot;])</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709738688', 'post140460709738688')">
+                  <pre>
+require_GET.__doc__ = &quot;Decorator to require that a view only accepts the GET method.&quot;</pre
+                  >
+                </li>
+              </ol>
+            </div>
+
+            <div class="commands">
+              <a href="#" onclick="return varToggle(this, '140460709738688')"
+                ><span>&#x25b6;</span> Local vars</a
+              >
+            </div>
+            <table class="vars" id="v140460709738688">
+              <thead>
+                <tr>
+                  <th>Variable</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>args</td>
+                  <td class="code"><pre>()</pre></td>
+                </tr>
+
+                <tr>
+                  <td>func</td>
+                  <td class="code"><pre>&lt;function webhook at 0x7fbf8e74b790&gt;</pre></td>
+                </tr>
+
+                <tr>
+                  <td>kwargs</td>
+                  <td class="code"><pre>{}</pre></td>
+                </tr>
+
+                <tr>
+                  <td>request</td>
+                  <td class="code">
+                    <pre>&lt;WSGIRequest: POST &#x27;/checkout/wh/&#x27;&gt;</pre>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>request_method_list</td>
+                  <td class="code"><pre>[&#x27;POST&#x27;]</pre></td>
+                </tr>
+              </tbody>
+            </table>
+          </li>
+
+          <li class="frame django">
+            <code class="fname"
+              >/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/views/decorators/csrf.py</code
+            >, line 54, in wrapped_view
+
+            <div class="context" id="c140460709737664">
+              <ol start="47" class="pre-context" id="pre140460709737664">
+                <li onclick="toggle('pre140460709737664', 'post140460709737664')"><pre></pre></li>
+
+                <li onclick="toggle('pre140460709737664', 'post140460709737664')"><pre></pre></li>
+
+                <li onclick="toggle('pre140460709737664', 'post140460709737664')">
+                  <pre>def csrf_exempt(view_func):</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709737664', 'post140460709737664')">
+                  <pre>
+    &quot;&quot;&quot;Mark a view function as being exempt from the CSRF view protection.&quot;&quot;&quot;</pre
+                  >
+                </li>
+
+                <li onclick="toggle('pre140460709737664', 'post140460709737664')">
+                  <pre>
+    # view_func.csrf_exempt = True would also work, but decorators are nicer</pre
+                  >
+                </li>
+
+                <li onclick="toggle('pre140460709737664', 'post140460709737664')">
+                  <pre>    # if they don&#x27;t have side effects, so return a new function.</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709737664', 'post140460709737664')">
+                  <pre>    def wrapped_view(*args, **kwargs):</pre>
+                </li>
+              </ol>
+
+              <ol start="54" class="context-line">
+                <li onclick="toggle('pre140460709737664', 'post140460709737664')">
+                  <pre>        return view_func(*args, **kwargs)</pre>
+                  <span>…</span>
+                </li>
+              </ol>
+
+              <ol start="55" class="post-context" id="post140460709737664">
+                <li onclick="toggle('pre140460709737664', 'post140460709737664')">
+                  <pre>    wrapped_view.csrf_exempt = True</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709737664', 'post140460709737664')">
+                  <pre>    return wraps(view_func)(wrapped_view)</pre>
+                </li>
+              </ol>
+            </div>
+
+            <div class="commands">
+              <a href="#" onclick="return varToggle(this, '140460709737664')"
+                ><span>&#x25b6;</span> Local vars</a
+              >
+            </div>
+            <table class="vars" id="v140460709737664">
+              <thead>
+                <tr>
+                  <th>Variable</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>args</td>
+                  <td class="code">
+                    <pre>(&lt;WSGIRequest: POST &#x27;/checkout/wh/&#x27;&gt;,)</pre>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>kwargs</td>
+                  <td class="code"><pre>{}</pre></td>
+                </tr>
+
+                <tr>
+                  <td>view_func</td>
+                  <td class="code"><pre>&lt;function webhook at 0x7fbf8e74b4c0&gt;</pre></td>
+                </tr>
+              </tbody>
+            </table>
+          </li>
+
+          <li class="frame user">
+            <code class="fname"
+              >/Users/patrickmarre/Desktop/class-projects/ms4/bluebird_ski/checkout/webhooks.py</code
+            >, line 56, in webhook
+
+            <div class="context" id="c140460709737088">
+              <ol start="49" class="pre-context" id="pre140460709737088">
+                <li onclick="toggle('pre140460709737088', 'post140460709737088')">
+                  <pre>    event_type = event[&#x27;type&#x27;]</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709737088', 'post140460709737088')"><pre></pre></li>
+
+                <li onclick="toggle('pre140460709737088', 'post140460709737088')">
+                  <pre>    # If there&#x27;s a handler for it, get it from the event map</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709737088', 'post140460709737088')">
+                  <pre>    # Use the generic one by default</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709737088', 'post140460709737088')">
+                  <pre>    event_handler = event_map.get(event_type, handler.handle_event)</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709737088', 'post140460709737088')"><pre></pre></li>
+
+                <li onclick="toggle('pre140460709737088', 'post140460709737088')">
+                  <pre>    # Call the event handler with the event</pre>
+                </li>
+              </ol>
+
+              <ol start="56" class="context-line">
+                <li onclick="toggle('pre140460709737088', 'post140460709737088')">
+                  <pre>    response = event_handler(event)</pre>
+                  <span>…</span>
+                </li>
+              </ol>
+
+              <ol start="57" class="post-context" id="post140460709737088">
+                <li onclick="toggle('pre140460709737088', 'post140460709737088')">
+                  <pre>    return response</pre>
+                </li>
+              </ol>
+            </div>
+
+            <div class="commands">
+              <a href="#" onclick="return varToggle(this, '140460709737088')"
+                ><span>&#x25b6;</span> Local vars</a
+              >
+            </div>
+            <table class="vars" id="v140460709737088">
+              <thead>
+                <tr>
+                  <th>Variable</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>event</td>
+                  <td class="code">
+                    <pre>
+{&#x27;api_version&#x27;: &#x27;2020-08-27&#x27;,
+ &#x27;created&#x27;: 1608245805,
+ &#x27;data&#x27;: {&#x27;object&#x27;: {&#x27;amount&#x27;: 3499,
+                     &#x27;amount_capturable&#x27;: 0,
+                     &#x27;amount_received&#x27;: 3499,
+                     &#x27;application&#x27;: None,
+                     &#x27;application_fee_amount&#x27;: None,
+                     &#x27;canceled_at&#x27;: None,
+                     &#x27;cancellation_reason&#x27;: None,
+                     &#x27;capture_method&#x27;: &#x27;automatic&#x27;,
+                     &#x27;charges&#x27;: {&#x27;data&#x27;: [{&#x27;amount&#x27;: 3499,
+                                           &#x27;amount_captured&#x27;: 3499,
+                                           &#x27;amount_refunded&#x27;: 0,
+                                           &#x27;application&#x27;: None,
+                                           &#x27;application_fee&#x27;: None,
+                                           &#x27;application_fee_amount&#x27;: None,
+                                           &#x27;balance_transaction&#x27;: &#x27;txn_1HzVOrDhgQ1LBFVRaOMKWGXk&#x27;,
+                                           &#x27;billing_details&#x27;: {&#x27;address&#x27;: {&#x27;city&#x27;: &#x27;sda&#x27;,
+                                                                           &#x27;country&#x27;: &#x27;AE&#x27;,
+                                                                           &#x27;line1&#x27;: &#x27;dsaf&#x27;,
+                                                                           &#x27;line2&#x27;: &#x27;d&#x27;,
+                                                                           &#x27;postal_code&#x27;: &#x27;42424&#x27;,
+                                                                           &#x27;state&#x27;: &#x27;ads&#x27;},
+                                                               &#x27;email&#x27;: &#x27;asdf@aedf.com&#x27;,
+                                                               &#x27;name&#x27;: &#x27;dasf&#x27;,
+                                                               &#x27;phone&#x27;: &#x27;asdf&#x27;},
+                                           &#x27;calculated_statement_descriptor&#x27;: &#x27;Stripe&#x27;,
+                                           &#x27;captured&#x27;: True,
+                                           &#x27;created&#x27;: 1608245805,
+                                           &#x27;currency&#x27;: &#x27;usd&#x27;,
+                                           &#x27;customer&#x27;: None,
+                                           &#x27;description&#x27;: None,
+                                           &#x27;destination&#x27;: None,
+                                           &#x27;dispute&#x27;: None,
+                                           &#x27;disputed&#x27;: False,
+                                           &#x27;failure_code&#x27;: None,
+                                           &#x27;failure_message&#x27;: None,
+                                           &#x27;fraud_details&#x27;: {},
+                                           &#x27;id&#x27;: &#x27;ch_1HzVOrDhgQ1LBFVRDOeQGezw&#x27;,
+                                           &#x27;invoice&#x27;: None,
+                                           &#x27;livemode&#x27;: False,
+                                           &#x27;metadata&#x27;: {&#x27;cart&#x27;: &#x27;{&quot;2&quot;: &#x27;
+                                                                &#x27;{&quot;items_by_size&quot;: &#x27;
+                                                                &#x27;{&quot;15,120&quot;: &#x27;
+                                                                &#x27;1}}}&#x27;,
+                                                        &#x27;save_info&#x27;: &#x27;false&#x27;,
+                                                        &#x27;username&#x27;: &#x27;AnonymousUser&#x27;},
+                                           &#x27;object&#x27;: &#x27;charge&#x27;,
+                                           &#x27;on_behalf_of&#x27;: None,
+                                           &#x27;order&#x27;: None,
+                                           &#x27;outcome&#x27;: {&#x27;network_status&#x27;: &#x27;approved_by_network&#x27;,
+                                                       &#x27;reason&#x27;: None,
+                                                       &#x27;risk_level&#x27;: &#x27;normal&#x27;,
+                                                       &#x27;risk_score&#x27;: 44,
+                                                       &#x27;seller_message&#x27;: &#x27;Payment &#x27;
+                                                                         &#x27;complete.&#x27;,
+                                                       &#x27;type&#x27;: &#x27;authorized&#x27;},
+                                           &#x27;paid&#x27;: True,
+                                           &#x27;payment_intent&#x27;: &#x27;pi_1HzV7EDhgQ1LBFVRcyFfPXSI&#x27;,
+              … &lt;trimmed 10240 bytes string&gt;</pre
+                    >
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>event_handler</td>
+                  <td class="code">
+                    <pre>
+&lt;bound method StripeWH_Handler.handle_payment_intent_succeeded of &lt;checkout.webhook_handler.StripeWH_Handler object at 0x7fbf8ec44e80&gt;&gt;</pre
+                    >
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>event_map</td>
+                  <td class="code">
+                    <pre>
+{&#x27;payment_intent.payment_failed&#x27;: &lt;bound method StripeWH_Handler.handle_payment_intent_payment_failed of &lt;checkout.webhook_handler.StripeWH_Handler object at 0x7fbf8ec44e80&gt;&gt;,
+ &#x27;payment_intent.succeeded&#x27;: &lt;bound method StripeWH_Handler.handle_payment_intent_succeeded of &lt;checkout.webhook_handler.StripeWH_Handler object at 0x7fbf8ec44e80&gt;&gt;}</pre
+                    >
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>event_type</td>
+                  <td class="code"><pre>&#x27;payment_intent.succeeded&#x27;</pre></td>
+                </tr>
+
+                <tr>
+                  <td>handler</td>
+                  <td class="code">
+                    <pre>
+&lt;checkout.webhook_handler.StripeWH_Handler object at 0x7fbf8ec44e80&gt;</pre
+                    >
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>payload</td>
+                  <td class="code">
+                    <pre>
+(b&#x27;{\n  &quot;id&quot;: &quot;evt_1HzVOrDhgQ1LBFVRNjcl2baP&quot;,\n  &quot;object&quot;: &quot;event&quot;,\n  &quot;api_ve&#x27;
+ b&#x27;rsion&quot;: &quot;2020-08-27&quot;,\n  &quot;created&quot;: 1608245805,\n  &quot;data&quot;: {\n    &quot;object&quot;:&#x27;
+ b&#x27; {\n      &quot;id&quot;: &quot;pi_1HzV7EDhgQ1LBFVRcyFfPXSI&quot;,\n      &quot;object&quot;: &quot;payment_i&#x27;
+ b&#x27;ntent&quot;,\n      &quot;amount&quot;: 3499,\n      &quot;amount_capturable&quot;: 0,\n      &quot;amoun&#x27;
+ b&#x27;t_received&quot;: 3499,\n      &quot;application&quot;: null,\n      &quot;application_fee_amo&#x27;
+ b&#x27;unt&quot;: null,\n      &quot;canceled_at&quot;: null,\n      &quot;cancellation_reason&quot;: null&#x27;
+ b&#x27;,\n      &quot;capture_method&quot;: &quot;automatic&quot;,\n      &quot;charges&quot;: {\n        &quot;objec&#x27;
+ b&#x27;t&quot;: &quot;list&quot;,\n        &quot;data&quot;: [\n          {\n            &quot;id&quot;: &quot;ch_1HzVOrDh&#x27;
+ b&#x27;gQ1LBFVRDOeQGezw&quot;,\n            &quot;object&quot;: &quot;charge&quot;,\n            &quot;amount&quot;:&#x27;
+ b&#x27; 3499,\n            &quot;amount_captured&quot;: 3499,\n            &quot;amount_refunded&#x27;
+ b&#x27;&quot;: 0,\n            &quot;application&quot;: null,\n            &quot;application_fee&quot;: nu&#x27;
+ b&#x27;ll,\n            &quot;application_fee_amount&quot;: null,\n            &quot;balance_tra&#x27;
+ b&#x27;nsaction&quot;: &quot;txn_1HzVOrDhgQ1LBFVRaOMKWGXk&quot;,\n            &quot;billing_details&quot;&#x27;
+ b&#x27;: {\n              &quot;address&quot;: {\n                &quot;city&quot;: &quot;sda&quot;,\n          &#x27;
+ b&#x27;      &quot;country&quot;: &quot;AE&quot;,\n                &quot;line1&quot;: &quot;dsaf&quot;,\n                &#x27;
+ b&#x27;&quot;line2&quot;: &quot;d&quot;,\n                &quot;postal_code&quot;: &quot;42424&quot;,\n                &quot;s&#x27;
+ b&#x27;tate&quot;: &quot;ads&quot;\n              },\n              &quot;email&quot;: &quot;asdf@aedf.com&quot;,\n  &#x27;
+ b&#x27;            &quot;name&quot;: &quot;dasf&quot;,\n              &quot;phone&quot;: &quot;asdf&quot;\n            },&#x27;
+ b&#x27;\n            &quot;calculated_statement_descriptor&quot;: &quot;Stripe&quot;,\n            &quot;c&#x27;
+ b&#x27;aptured&quot;: true,\n            &quot;created&quot;: 1608245805,\n            &quot;currency&#x27;
+ b&#x27;&quot;: &quot;usd&quot;,\n            &quot;customer&quot;: null,\n            &quot;description&quot;: null,&#x27;
+ b&#x27;\n            &quot;destination&quot;: null,\n            &quot;dispute&quot;: null,\n         &#x27;
+ b&#x27;   &quot;disputed&quot;: false,\n            &quot;failure_code&quot;: null,\n            &quot;fai&#x27;
+ b&#x27;lure_message&quot;: null,\n            &quot;fraud_details&quot;: {\n            },\n     &#x27;
+ b&#x27;       &quot;invoice&quot;: null,\n            &quot;livemode&quot;: false,\n            &quot;meta&#x27;
+ b&#x27;data&quot;: {\n              &quot;cart&quot;: &quot;{\\&quot;2\\&quot;: {\\&quot;items_by_size\\&quot;: {\\&quot;15,12&#x27;
+ b&#x27;0\\&quot;: 1}}}&quot;,\n              &quot;save_info&quot;: &quot;false&quot;,\n              &quot;username&quot;&#x27;
+ b&#x27;: &quot;AnonymousUser&quot;\n            },\n            &quot;on_behalf_of&quot;: null,\n     &#x27;
+ b&#x27;       &quot;order&quot;: null,\n            &quot;outcome&quot;: {\n              &quot;network_st&#x27;
+ b&#x27;atus&quot;: &quot;approved_by_network&quot;,\n              &quot;reason&quot;: null,\n            &#x27;
+ b&#x27;  &quot;risk_level&quot;: &quot;normal&quot;,\n              &quot;risk_score&quot;: 44,\n              &#x27;
+ b&#x27;&quot;seller_message&quot;: &quot;Payment complete.&quot;,\n              &quot;type&quot;: &quot;authorized&#x27;
+ b&#x27;&quot;\n            },\n            &quot;paid&quot;: true,\n            &quot;payment_intent&quot;:&#x27;
+ b&#x27; &quot;pi_1HzV7EDhgQ1LBFVRcyFfPXSI&quot;,\n            &quot;payment_method&quot;: &quot;pm_1HzVOq&#x27;
+ b&#x27;DhgQ1LBFVRUIfBnERK&quot;,\n            &quot;payment_method_details&quot;: {\n           &#x27;
+ b&#x27;   &quot;card&quot;: {\n                &quot;brand&quot;: &quot;visa&quot;,\n                &quot;checks&quot;: &#x27;
+ b&#x27;{\n                  &quot;address_line1_check&quot;: &quot;pass&quot;,\n                  &quot;ad&#x27;
+ b&#x27;dress_postal_code_check&quot;: &quot;pass&quot;,\n                  &quot;cvc_check&quot;: &quot;pass&quot;\n&#x27;
+ b&#x27;                },\n                &quot;country&quot;: &quot;US&quot;,\n                &quot;exp&#x27;
+ b&#x27;_month&quot;: 4,\n                &quot;exp_year&quot;: 2024,\n                &quot;fingerpri&#x27;
+ b&#x27;nt&quot;: &quot;umMbzVGSUjigzu4B&quot;,\n                &quot;funding&quot;: &quot;credit&quot;,\n          &#x27;
+ b&#x27;      &quot;installments&quot;: null,\n                &quot;last4&quot;: &quot;4242&quot;,\n           &#x27;
+ b&#x27;     &quot;network&quot;: &quot;visa&quot;,\n                &quot;three_d_secure&quot;: null,\n        &#x27;
+ b&#x27;        &quot;wallet&quot;: null\n              },\n              &quot;type&quot;: &quot;card&quot;\n   &#x27;
+ b&#x27;         },\n            &quot;receipt_email&quot;: null,\n            &quot;receipt_numb&#x27;
+ b&#x27;er&quot;: null,\n            &quot;receipt_url&quot;: &quot;https://pay.stripe.com/receipts/a&#x27;
+ b&#x27;cct_1HwYOwDhgQ1LBFVR/ch_1HzVOrDhgQ1LBFVRDOeQGezw/rcpt_Iagm5gwB9n9IZFH5ehlSyQ&#x27;
+ b&#x27;4PV3lQgPZ&quot;,\n            &quot;refunded&quot;: false,\n            &quot;refunds&quot;: {\n    &#x27;
+ b&#x27;          &quot;object&quot;: &quot;list&quot;,\n              &quot;data&quot;: [\n\n              ],\n  &#x27;
+ b&#x27;            &quot;has_more&quot;: false,\n              &quot;total_count&quot;: 0,\n         &#x27;
+ b&#x27;     &quot;url&quot;: &quot;/v1/charges/ch_1HzVOrDhgQ1LBFVRDOeQGezw/refunds&quot;\n          &#x27;
+ b&#x27;  },\n            &quot;review&quot;: null,\n            &quot;shi… &lt;trimmed 6770 bytes string&gt;</pre
+                    >
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>request</td>
+                  <td class="code">
+                    <pre>&lt;WSGIRequest: POST &#x27;/checkout/wh/&#x27;&gt;</pre>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>sig_header</td>
+                  <td class="code">
+                    <pre>
+&#x27;t=1608245821,v1=b457e6902ff20b7e745cdfb06fa5bc5fc897ce542427618f758fec84dd04315b,v0=107cd6d6df05ce37269aa6588fa23f5ae48d0355a372b429dcb93a1c80e6b7f9&#x27;</pre
+                    >
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>wh_secret</td>
+                  <td class="code">
+                    <pre>&#x27;whsec_1BNy1LzHKrOtrlu6HqmxBnRoOSTUJPuD&#x27;</pre>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </li>
+
+          <li class="frame user">
+            <code class="fname"
+              >/Users/patrickmarre/Desktop/class-projects/ms4/bluebird_ski/checkout/webhook_handler.py</code
+            >, line 105, in handle_payment_intent_succeeded
+
+            <div class="context" id="c140460709739264">
+              <ol start="98" class="pre-context" id="pre140460709739264">
+                <li onclick="toggle('pre140460709739264', 'post140460709739264')">
+                  <pre>                )</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709739264', 'post140460709739264')">
+                  <pre>                order_exists = True</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709739264', 'post140460709739264')">
+                  <pre>                break</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709739264', 'post140460709739264')">
+                  <pre>            except Order.DoesNotExist:</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709739264', 'post140460709739264')">
+                  <pre>                attempt += 1</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709739264', 'post140460709739264')">
+                  <pre>                time.sleep(1)</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709739264', 'post140460709739264')">
+                  <pre>        if order_exists:</pre>
+                </li>
+              </ol>
+
+              <ol start="105" class="context-line">
+                <li onclick="toggle('pre140460709739264', 'post140460709739264')">
+                  <pre>            self._send_confirmation_email(order)</pre>
+                  <span>…</span>
+                </li>
+              </ol>
+
+              <ol start="106" class="post-context" id="post140460709739264">
+                <li onclick="toggle('pre140460709739264', 'post140460709739264')">
+                  <pre>            return HttpResponse(</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709739264', 'post140460709739264')">
+                  <pre>
+                content=f&#x27;Webhook received: {event[&quot;type&quot;]} | SUCCESS: Verified order already in database&#x27;,</pre
+                  >
+                </li>
+
+                <li onclick="toggle('pre140460709739264', 'post140460709739264')">
+                  <pre>                status=200)</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709739264', 'post140460709739264')">
+                  <pre>        else:</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709739264', 'post140460709739264')">
+                  <pre>            order = None</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709739264', 'post140460709739264')">
+                  <pre>            try:</pre>
+                </li>
+              </ol>
+            </div>
+
+            <div class="commands">
+              <a href="#" onclick="return varToggle(this, '140460709739264')"
+                ><span>&#x25b6;</span> Local vars</a
+              >
+            </div>
+            <table class="vars" id="v140460709739264">
+              <thead>
+                <tr>
+                  <th>Variable</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>attempt</td>
+                  <td class="code"><pre>1</pre></td>
+                </tr>
+
+                <tr>
+                  <td>billing_details</td>
+                  <td class="code">
+                    <pre>
+{&#x27;address&#x27;: {&#x27;city&#x27;: &#x27;sda&#x27;,
+             &#x27;country&#x27;: &#x27;AE&#x27;,
+             &#x27;line1&#x27;: &#x27;dsaf&#x27;,
+             &#x27;line2&#x27;: &#x27;d&#x27;,
+             &#x27;postal_code&#x27;: &#x27;42424&#x27;,
+             &#x27;state&#x27;: &#x27;ads&#x27;},
+ &#x27;email&#x27;: &#x27;asdf@aedf.com&#x27;,
+ &#x27;name&#x27;: &#x27;dasf&#x27;,
+ &#x27;phone&#x27;: &#x27;asdf&#x27;}</pre
+                    >
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>cart</td>
+                  <td class="code">
+                    <pre>
+&#x27;{&quot;2&quot;: {&quot;items_by_size&quot;: {&quot;15,120&quot;: 1}}}&#x27;</pre
+                    >
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>event</td>
+                  <td class="code">
+                    <pre>
+{&#x27;api_version&#x27;: &#x27;2020-08-27&#x27;,
+ &#x27;created&#x27;: 1608245805,
+ &#x27;data&#x27;: {&#x27;object&#x27;: {&#x27;amount&#x27;: 3499,
+                     &#x27;amount_capturable&#x27;: 0,
+                     &#x27;amount_received&#x27;: 3499,
+                     &#x27;application&#x27;: None,
+                     &#x27;application_fee_amount&#x27;: None,
+                     &#x27;canceled_at&#x27;: None,
+                     &#x27;cancellation_reason&#x27;: None,
+                     &#x27;capture_method&#x27;: &#x27;automatic&#x27;,
+                     &#x27;charges&#x27;: {&#x27;data&#x27;: [{&#x27;amount&#x27;: 3499,
+                                           &#x27;amount_captured&#x27;: 3499,
+                                           &#x27;amount_refunded&#x27;: 0,
+                                           &#x27;application&#x27;: None,
+                                           &#x27;application_fee&#x27;: None,
+                                           &#x27;application_fee_amount&#x27;: None,
+                                           &#x27;balance_transaction&#x27;: &#x27;txn_1HzVOrDhgQ1LBFVRaOMKWGXk&#x27;,
+                                           &#x27;billing_details&#x27;: {&#x27;address&#x27;: {&#x27;city&#x27;: &#x27;sda&#x27;,
+                                                                           &#x27;country&#x27;: &#x27;AE&#x27;,
+                                                                           &#x27;line1&#x27;: &#x27;dsaf&#x27;,
+                                                                           &#x27;line2&#x27;: &#x27;d&#x27;,
+                                                                           &#x27;postal_code&#x27;: &#x27;42424&#x27;,
+                                                                           &#x27;state&#x27;: &#x27;ads&#x27;},
+                                                               &#x27;email&#x27;: &#x27;asdf@aedf.com&#x27;,
+                                                               &#x27;name&#x27;: &#x27;dasf&#x27;,
+                                                               &#x27;phone&#x27;: &#x27;asdf&#x27;},
+                                           &#x27;calculated_statement_descriptor&#x27;: &#x27;Stripe&#x27;,
+                                           &#x27;captured&#x27;: True,
+                                           &#x27;created&#x27;: 1608245805,
+                                           &#x27;currency&#x27;: &#x27;usd&#x27;,
+                                           &#x27;customer&#x27;: None,
+                                           &#x27;description&#x27;: None,
+                                           &#x27;destination&#x27;: None,
+                                           &#x27;dispute&#x27;: None,
+                                           &#x27;disputed&#x27;: False,
+                                           &#x27;failure_code&#x27;: None,
+                                           &#x27;failure_message&#x27;: None,
+                                           &#x27;fraud_details&#x27;: {},
+                                           &#x27;id&#x27;: &#x27;ch_1HzVOrDhgQ1LBFVRDOeQGezw&#x27;,
+                                           &#x27;invoice&#x27;: None,
+                                           &#x27;livemode&#x27;: False,
+                                           &#x27;metadata&#x27;: {&#x27;cart&#x27;: &#x27;{&quot;2&quot;: &#x27;
+                                                                &#x27;{&quot;items_by_size&quot;: &#x27;
+                                                                &#x27;{&quot;15,120&quot;: &#x27;
+                                                                &#x27;1}}}&#x27;,
+                                                        &#x27;save_info&#x27;: &#x27;false&#x27;,
+                                                        &#x27;username&#x27;: &#x27;AnonymousUser&#x27;},
+                                           &#x27;object&#x27;: &#x27;charge&#x27;,
+                                           &#x27;on_behalf_of&#x27;: None,
+                                           &#x27;order&#x27;: None,
+                                           &#x27;outcome&#x27;: {&#x27;network_status&#x27;: &#x27;approved_by_network&#x27;,
+                                                       &#x27;reason&#x27;: None,
+                                                       &#x27;risk_level&#x27;: &#x27;normal&#x27;,
+                                                       &#x27;risk_score&#x27;: 44,
+                                                       &#x27;seller_message&#x27;: &#x27;Payment &#x27;
+                                                                         &#x27;complete.&#x27;,
+                                                       &#x27;type&#x27;: &#x27;authorized&#x27;},
+                                           &#x27;paid&#x27;: True,
+                                           &#x27;payment_intent&#x27;: &#x27;pi_1HzV7EDhgQ1LBFVRcyFfPXSI&#x27;,
+              … &lt;trimmed 10240 bytes string&gt;</pre
+                    >
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>field</td>
+                  <td class="code"><pre>&#x27;state&#x27;</pre></td>
+                </tr>
+
+                <tr>
+                  <td>grand_total</td>
+                  <td class="code"><pre>34.99</pre></td>
+                </tr>
+
+                <tr>
+                  <td>intent</td>
+                  <td class="code">
+                    <pre>
+{&#x27;amount&#x27;: 3499,
+ &#x27;amount_capturable&#x27;: 0,
+ &#x27;amount_received&#x27;: 3499,
+ &#x27;application&#x27;: None,
+ &#x27;application_fee_amount&#x27;: None,
+ &#x27;canceled_at&#x27;: None,
+ &#x27;cancellation_reason&#x27;: None,
+ &#x27;capture_method&#x27;: &#x27;automatic&#x27;,
+ &#x27;charges&#x27;: {&#x27;data&#x27;: [{&#x27;amount&#x27;: 3499,
+                       &#x27;amount_captured&#x27;: 3499,
+                       &#x27;amount_refunded&#x27;: 0,
+                       &#x27;application&#x27;: None,
+                       &#x27;application_fee&#x27;: None,
+                       &#x27;application_fee_amount&#x27;: None,
+                       &#x27;balance_transaction&#x27;: &#x27;txn_1HzVOrDhgQ1LBFVRaOMKWGXk&#x27;,
+                       &#x27;billing_details&#x27;: {&#x27;address&#x27;: {&#x27;city&#x27;: &#x27;sda&#x27;,
+                                                       &#x27;country&#x27;: &#x27;AE&#x27;,
+                                                       &#x27;line1&#x27;: &#x27;dsaf&#x27;,
+                                                       &#x27;line2&#x27;: &#x27;d&#x27;,
+                                                       &#x27;postal_code&#x27;: &#x27;42424&#x27;,
+                                                       &#x27;state&#x27;: &#x27;ads&#x27;},
+                                           &#x27;email&#x27;: &#x27;asdf@aedf.com&#x27;,
+                                           &#x27;name&#x27;: &#x27;dasf&#x27;,
+                                           &#x27;phone&#x27;: &#x27;asdf&#x27;},
+                       &#x27;calculated_statement_descriptor&#x27;: &#x27;Stripe&#x27;,
+                       &#x27;captured&#x27;: True,
+                       &#x27;created&#x27;: 1608245805,
+                       &#x27;currency&#x27;: &#x27;usd&#x27;,
+                       &#x27;customer&#x27;: None,
+                       &#x27;description&#x27;: None,
+                       &#x27;destination&#x27;: None,
+                       &#x27;dispute&#x27;: None,
+                       &#x27;disputed&#x27;: False,
+                       &#x27;failure_code&#x27;: None,
+                       &#x27;failure_message&#x27;: None,
+                       &#x27;fraud_details&#x27;: {},
+                       &#x27;id&#x27;: &#x27;ch_1HzVOrDhgQ1LBFVRDOeQGezw&#x27;,
+                       &#x27;invoice&#x27;: None,
+                       &#x27;livemode&#x27;: False,
+                       &#x27;metadata&#x27;: {&#x27;cart&#x27;: &#x27;{&quot;2&quot;: {&quot;items_by_size&quot;: &#x27;
+                                            &#x27;{&quot;15,120&quot;: 1}}}&#x27;,
+                                    &#x27;save_info&#x27;: &#x27;false&#x27;,
+                                    &#x27;username&#x27;: &#x27;AnonymousUser&#x27;},
+                       &#x27;object&#x27;: &#x27;charge&#x27;,
+                       &#x27;on_behalf_of&#x27;: None,
+                       &#x27;order&#x27;: None,
+                       &#x27;outcome&#x27;: {&#x27;network_status&#x27;: &#x27;approved_by_network&#x27;,
+                                   &#x27;reason&#x27;: None,
+                                   &#x27;risk_level&#x27;: &#x27;normal&#x27;,
+                                   &#x27;risk_score&#x27;: 44,
+                                   &#x27;seller_message&#x27;: &#x27;Payment complete.&#x27;,
+                                   &#x27;type&#x27;: &#x27;authorized&#x27;},
+                       &#x27;paid&#x27;: True,
+                       &#x27;payment_intent&#x27;: &#x27;pi_1HzV7EDhgQ1LBFVRcyFfPXSI&#x27;,
+                       &#x27;payment_method&#x27;: &#x27;pm_1HzVOqDhgQ1LBFVRUIfBnERK&#x27;,
+                       &#x27;payment_method_details&#x27;: {&#x27;card&#x27;: {&#x27;brand&#x27;: &#x27;visa&#x27;,
+                                                           &#x27;checks&#x27;: {&#x27;address_line1_check&#x27;: &#x27;pass&#x27;,
+                                                                      &#x27;address_postal_code_check&#x27;: &#x27;pass&#x27;,
+                                                                      &#x27;cvc_check&#x27;: &#x27;pass&#x27;},
+                                                           &#x27;country&#x27;: &#x27;US&#x27;,
+                                                           &#x27;exp_month&#x27;: 4,
+                                                           &#x27;exp_year&#x27;: 2024,
+                                                           &#x27;fingerprint&#x27;: &#x27;umMbzVGSUjigzu4B&#x27;,
+                                                           &#x27;funding&#x27;: &#x27;credit&#x27;,
+                                                           &#x27;installments&#x27;: None,
+                                                           &#x27;last4&#x27;: &#x27;4242&#x27;,
+                                                           &#x27;network&#x27;: &#x27;visa&#x27;,
+                                                           &#x27;three_d_secure&#x27;: None,
+                                                           &#x27;wallet&#x27;: None},
+                                                  &#x27;type&#x27;: &#x27;card&#x27;},
+                       &#x27;receipt_email&#x27;: None,
+ … &lt;trimmed 6969 bytes string&gt;</pre
+                    >
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>order</td>
+                  <td class="code"><pre>&lt;Order: 47688958F88A4D259AE49BC8EA64910A&gt;</pre></td>
+                </tr>
+
+                <tr>
+                  <td>order_exists</td>
+                  <td class="code"><pre>True</pre></td>
+                </tr>
+
+                <tr>
+                  <td>pid</td>
+                  <td class="code"><pre>&#x27;pi_1HzV7EDhgQ1LBFVRcyFfPXSI&#x27;</pre></td>
+                </tr>
+
+                <tr>
+                  <td>profile</td>
+                  <td class="code"><pre>None</pre></td>
+                </tr>
+
+                <tr>
+                  <td>save_info</td>
+                  <td class="code"><pre>&#x27;false&#x27;</pre></td>
+                </tr>
+
+                <tr>
+                  <td>self</td>
+                  <td class="code">
+                    <pre>
+&lt;checkout.webhook_handler.StripeWH_Handler object at 0x7fbf8ec44e80&gt;</pre
+                    >
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>shipping_details</td>
+                  <td class="code">
+                    <pre>
+{&#x27;address&#x27;: {&#x27;city&#x27;: &#x27;sda&#x27;,
+             &#x27;country&#x27;: &#x27;AE&#x27;,
+             &#x27;line1&#x27;: &#x27;dsaf&#x27;,
+             &#x27;line2&#x27;: &#x27;d&#x27;,
+             &#x27;postal_code&#x27;: &#x27;asdf&#x27;,
+             &#x27;state&#x27;: &#x27;ads&#x27;},
+ &#x27;carrier&#x27;: None,
+ &#x27;name&#x27;: &#x27;dasf&#x27;,
+ &#x27;phone&#x27;: &#x27;asdf&#x27;,
+ &#x27;tracking_number&#x27;: None}</pre
+                    >
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>username</td>
+                  <td class="code"><pre>&#x27;AnonymousUser&#x27;</pre></td>
+                </tr>
+
+                <tr>
+                  <td>value</td>
+                  <td class="code"><pre>&#x27;ads&#x27;</pre></td>
+                </tr>
+              </tbody>
+            </table>
+          </li>
+
+          <li class="frame user">
+            <code class="fname"
+              >/Users/patrickmarre/Desktop/class-projects/ms4/bluebird_ski/checkout/webhook_handler.py</code
+            >, line 23, in _send_confirmation_email
+
+            <div class="context" id="c140460709739904">
+              <ol start="16" class="pre-context" id="pre140460709739904">
+                <li onclick="toggle('pre140460709739904', 'post140460709739904')"><pre></pre></li>
+
+                <li onclick="toggle('pre140460709739904', 'post140460709739904')">
+                  <pre>    def __init__(self, request):</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709739904', 'post140460709739904')">
+                  <pre>        self.request = request</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709739904', 'post140460709739904')"><pre></pre></li>
+
+                <li onclick="toggle('pre140460709739904', 'post140460709739904')">
+                  <pre>    def _send_confirmation_email(self, order):</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709739904', 'post140460709739904')">
+                  <pre>
+        &quot;&quot;&quot;Send the user a confirmation email&quot;&quot;&quot;</pre
+                  >
+                </li>
+
+                <li onclick="toggle('pre140460709739904', 'post140460709739904')">
+                  <pre>        cust_email = order.email</pre>
+                </li>
+              </ol>
+
+              <ol start="23" class="context-line">
+                <li onclick="toggle('pre140460709739904', 'post140460709739904')">
+                  <pre>        subject = render_to_string(</pre>
+                  <span>…</span>
+                </li>
+              </ol>
+
+              <ol start="24" class="post-context" id="post140460709739904">
+                <li onclick="toggle('pre140460709739904', 'post140460709739904')">
+                  <pre>
+            &#x27;checkout/confirmation_emails/confirmation_email_subject.txt&#x27;,</pre
+                  >
+                </li>
+
+                <li onclick="toggle('pre140460709739904', 'post140460709739904')">
+                  <pre>            {&#x27;order&#x27;: order})</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709739904', 'post140460709739904')">
+                  <pre>        body = render_to_string(</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709739904', 'post140460709739904')">
+                  <pre>
+            &#x27;checkout/confirmation_emails/confirmation_email_body.txt&#x27;,</pre
+                  >
+                </li>
+
+                <li onclick="toggle('pre140460709739904', 'post140460709739904')">
+                  <pre>
+            {&#x27;order&#x27;: order, &#x27;contact_email&#x27;: settings.DEFAULT_FROM_EMAIL})</pre
+                  >
+                </li>
+
+                <li onclick="toggle('pre140460709739904', 'post140460709739904')"><pre></pre></li>
+              </ol>
+            </div>
+
+            <div class="commands">
+              <a href="#" onclick="return varToggle(this, '140460709739904')"
+                ><span>&#x25b6;</span> Local vars</a
+              >
+            </div>
+            <table class="vars" id="v140460709739904">
+              <thead>
+                <tr>
+                  <th>Variable</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>cust_email</td>
+                  <td class="code"><pre>&#x27;asdf@aedf.com&#x27;</pre></td>
+                </tr>
+
+                <tr>
+                  <td>order</td>
+                  <td class="code"><pre>&lt;Order: 47688958F88A4D259AE49BC8EA64910A&gt;</pre></td>
+                </tr>
+
+                <tr>
+                  <td>self</td>
+                  <td class="code">
+                    <pre>
+&lt;checkout.webhook_handler.StripeWH_Handler object at 0x7fbf8ec44e80&gt;</pre
+                    >
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </li>
+
+          <li class="frame django">
+            <code class="fname"
+              >/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/template/loader.py</code
+            >, line 61, in render_to_string
+
+            <div class="context" id="c140460709739584">
+              <ol start="54" class="pre-context" id="pre140460709739584">
+                <li onclick="toggle('pre140460709739584', 'post140460709739584')">
+                  <pre>    Load a template and render it with a context. Return a string.</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709739584', 'post140460709739584')"><pre></pre></li>
+
+                <li onclick="toggle('pre140460709739584', 'post140460709739584')">
+                  <pre>    template_name may be a string or a list of strings.</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709739584', 'post140460709739584')">
+                  <pre>    &quot;&quot;&quot;</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709739584', 'post140460709739584')">
+                  <pre>    if isinstance(template_name, (list, tuple)):</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709739584', 'post140460709739584')">
+                  <pre>        template = select_template(template_name, using=using)</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709739584', 'post140460709739584')">
+                  <pre>    else:</pre>
+                </li>
+              </ol>
+
+              <ol start="61" class="context-line">
+                <li onclick="toggle('pre140460709739584', 'post140460709739584')">
+                  <pre>        template = get_template(template_name, using=using)</pre>
+                  <span>…</span>
+                </li>
+              </ol>
+
+              <ol start="62" class="post-context" id="post140460709739584">
+                <li onclick="toggle('pre140460709739584', 'post140460709739584')">
+                  <pre>    return template.render(context, request)</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709739584', 'post140460709739584')"><pre></pre></li>
+
+                <li onclick="toggle('pre140460709739584', 'post140460709739584')"><pre></pre></li>
+
+                <li onclick="toggle('pre140460709739584', 'post140460709739584')">
+                  <pre>def _engine_list(using=None):</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709739584', 'post140460709739584')">
+                  <pre>    return engines.all() if using is None else [engines[using]]</pre>
+                </li>
+              </ol>
+            </div>
+
+            <div class="commands">
+              <a href="#" onclick="return varToggle(this, '140460709739584')"
+                ><span>&#x25b6;</span> Local vars</a
+              >
+            </div>
+            <table class="vars" id="v140460709739584">
+              <thead>
+                <tr>
+                  <th>Variable</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>context</td>
+                  <td class="code">
+                    <pre>{&#x27;order&#x27;: &lt;Order: 47688958F88A4D259AE49BC8EA64910A&gt;}</pre>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>request</td>
+                  <td class="code"><pre>None</pre></td>
+                </tr>
+
+                <tr>
+                  <td>template_name</td>
+                  <td class="code">
+                    <pre>
+&#x27;checkout/confirmation_emails/confirmation_email_subject.txt&#x27;</pre
+                    >
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>using</td>
+                  <td class="code"><pre>None</pre></td>
+                </tr>
+              </tbody>
+            </table>
+          </li>
+
+          <li class="frame django">
+            <code class="fname"
+              >/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/template/loader.py</code
+            >, line 19, in get_template
+
+            <div class="context" id="c140460709737920">
+              <ol start="12" class="pre-context" id="pre140460709737920">
+                <li onclick="toggle('pre140460709737920', 'post140460709737920')">
+                  <pre>    engines = _engine_list(using)</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709737920', 'post140460709737920')">
+                  <pre>    for engine in engines:</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709737920', 'post140460709737920')">
+                  <pre>        try:</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709737920', 'post140460709737920')">
+                  <pre>            return engine.get_template(template_name)</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709737920', 'post140460709737920')">
+                  <pre>        except TemplateDoesNotExist as e:</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709737920', 'post140460709737920')">
+                  <pre>            chain.append(e)</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709737920', 'post140460709737920')"><pre></pre></li>
+              </ol>
+
+              <ol start="19" class="context-line">
+                <li onclick="toggle('pre140460709737920', 'post140460709737920')">
+                  <pre>    raise TemplateDoesNotExist(template_name, chain=chain)</pre>
+                  <span>…</span>
+                </li>
+              </ol>
+
+              <ol start="20" class="post-context" id="post140460709737920">
+                <li onclick="toggle('pre140460709737920', 'post140460709737920')"><pre></pre></li>
+
+                <li onclick="toggle('pre140460709737920', 'post140460709737920')"><pre></pre></li>
+
+                <li onclick="toggle('pre140460709737920', 'post140460709737920')">
+                  <pre>def select_template(template_name_list, using=None):</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709737920', 'post140460709737920')">
+                  <pre>    &quot;&quot;&quot;</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709737920', 'post140460709737920')">
+                  <pre>    Load and return a template for one of the given names.</pre>
+                </li>
+
+                <li onclick="toggle('pre140460709737920', 'post140460709737920')"><pre></pre></li>
+              </ol>
+            </div>
+
+            <div class="commands">
+              <a href="#" onclick="return varToggle(this, '140460709737920')"
+                ><span>&#x25b6;</span> Local vars</a
+              >
+            </div>
+            <table class="vars" id="v140460709737920">
+              <thead>
+                <tr>
+                  <th>Variable</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>chain</td>
+                  <td class="code">
+                    <pre>
+[TemplateDoesNotExist(&#x27;checkout/confirmation_emails/confirmation_email_subject.txt&#x27;)]</pre
+                    >
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>engine</td>
+                  <td class="code">
+                    <pre>
+&lt;django.template.backends.django.DjangoTemplates object at 0x7fbf8e86c970&gt;</pre
+                    >
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>engines</td>
+                  <td class="code">
+                    <pre>
+[&lt;django.template.backends.django.DjangoTemplates object at 0x7fbf8e86c970&gt;]</pre
+                    >
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>template_name</td>
+                  <td class="code">
+                    <pre>
+&#x27;checkout/confirmation_emails/confirmation_email_subject.txt&#x27;</pre
+                    >
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>using</td>
+                  <td class="code"><pre>None</pre></td>
+                </tr>
+              </tbody>
+            </table>
+          </li>
+        </ul>
+      </div>
+      <form action="http://dpaste.com/" name="pasteform" id="pasteform" method="post">
+        <div id="pastebinTraceback" class="pastebin">
+          <input type="hidden" name="language" value="PythonConsole" />
+          <input type="hidden" name="title" value="TemplateDoesNotExist at /checkout/wh/" />
+          <input type="hidden" name="source" value="Django Dpaste Agent" />
+          <input type="hidden" name="poster" value="Django" />
+          <textarea name="content" id="traceback_area" cols="140" rows="25">
+Environment:
+Request Method: POST
+Request URL: http://c04a41fc3514.ngrok.io/checkout/wh/
+Django Version: 3.1.3
+Python Version: 3.8.5
+Installed Applications:
+[&#x27;django.contrib.admin&#x27;,
+ &#x27;django.contrib.auth&#x27;,
+ &#x27;django.contrib.contenttypes&#x27;,
+ &#x27;django.contrib.sessions&#x27;,
+ &#x27;django.contrib.messages&#x27;,
+ &#x27;django.contrib.staticfiles&#x27;,
+ &#x27;django.contrib.sites&#x27;,
+ &#x27;allauth&#x27;,
+ &#x27;allauth.account&#x27;,
+ &#x27;allauth.socialaccount&#x27;,
+ &#x27;home&#x27;,
+ &#x27;services&#x27;,
+ &#x27;cart&#x27;,
+ &#x27;checkout&#x27;,
+ &#x27;crispy_forms&#x27;,
+ &#x27;profiles&#x27;,
+ &#x27;storages&#x27;]
+Installed Middleware:
+[&#x27;django.middleware.security.SecurityMiddleware&#x27;,
+ &#x27;django.contrib.sessions.middleware.SessionMiddleware&#x27;,
+ &#x27;django.middleware.common.CommonMiddleware&#x27;,
+ &#x27;django.middleware.csrf.CsrfViewMiddleware&#x27;,
+ &#x27;django.contrib.auth.middleware.AuthenticationMiddleware&#x27;,
+ &#x27;django.contrib.messages.middleware.MessageMiddleware&#x27;,
+ &#x27;django.middleware.clickjacking.XFrameOptionsMiddleware&#x27;]
+Template loader postmortem
+Django tried loading these templates, in this order:
+Using engine django:
+    * django.template.loaders.filesystem.Loader: /Users/patrickmarre/Desktop/class-projects/ms4/bluebird_ski/templates/checkout/confirmation_emails/confirmation_email_subject.txt (Source does not exist)
+    * django.template.loaders.filesystem.Loader: /Users/patrickmarre/Desktop/class-projects/ms4/bluebird_ski/templates/allauth/checkout/confirmation_emails/confirmation_email_subject.txt (Source does not exist)
+    * django.template.loaders.app_directories.Loader: /Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/contrib/admin/templates/checkout/confirmation_emails/confirmation_email_subject.txt (Source does not exist)
+    * django.template.loaders.app_directories.Loader: /Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/contrib/auth/templates/checkout/confirmation_emails/confirmation_email_subject.txt (Source does not exist)
+    * django.template.loaders.app_directories.Loader: /Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/allauth/templates/checkout/confirmation_emails/confirmation_email_subject.txt (Source does not exist)
+    * django.template.loaders.app_directories.Loader: /Users/patrickmarre/Desktop/class-projects/ms4/bluebird_ski/home/templates/checkout/confirmation_emails/confirmation_email_subject.txt (Source does not exist)
+    * django.template.loaders.app_directories.Loader: /Users/patrickmarre/Desktop/class-projects/ms4/bluebird_ski/services/templates/checkout/confirmation_emails/confirmation_email_subject.txt (Source does not exist)
+    * django.template.loaders.app_directories.Loader: /Users/patrickmarre/Desktop/class-projects/ms4/bluebird_ski/cart/templates/checkout/confirmation_emails/confirmation_email_subject.txt (Source does not exist)
+    * django.template.loaders.app_directories.Loader: /Users/patrickmarre/Desktop/class-projects/ms4/bluebird_ski/checkout/templates/checkout/confirmation_emails/confirmation_email_subject.txt (Source does not exist)
+    * django.template.loaders.app_directories.Loader: /Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/crispy_forms/templates/checkout/confirmation_emails/confirmation_email_subject.txt (Source does not exist)
+    * django.template.loaders.app_directories.Loader: /Users/patrickmarre/Desktop/class-projects/ms4/bluebird_ski/profiles/templates/checkout/confirmation_emails/confirmation_email_subject.txt (Source does not exist)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/views/decorators/http.py", line 40, in inner
+    return func(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/patrickmarre/Desktop/class-projects/ms4/bluebird_ski/checkout/webhooks.py", line 56, in webhook
+    response = event_handler(event)
+  File "/Users/patrickmarre/Desktop/class-projects/ms4/bluebird_ski/checkout/webhook_handler.py", line 105, in handle_payment_intent_succeeded
+    self._send_confirmation_email(order)
+  File "/Users/patrickmarre/Desktop/class-projects/ms4/bluebird_ski/checkout/webhook_handler.py", line 23, in _send_confirmation_email
+    subject = render_to_string(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+Exception Type: TemplateDoesNotExist at /checkout/wh/
+Exception Value: checkout/confirmation_emails/confirmation_email_subject.txt
+</textarea
+          >
+          <br /><br />
+          <input type="submit" value="Share this traceback on a public website" />
+        </div>
+      </form>
+    </div>
+    <div id="requestinfo">
+      <h2>Request information</h2>
+
+      <h3 id="user-info">USER</h3>
+      <p>AnonymousUser</p>
+
+      <h3 id="get-info">GET</h3>
+
+      <p>No GET data</p>
+
+      <h3 id="post-info">POST</h3>
+
+      <p>No POST data</p>
+
+      <h3 id="files-info">FILES</h3>
+
+      <p>No FILES data</p>
+
+      <h3 id="cookie-info">COOKIES</h3>
+
+      <p>No cookie data</p>
+
+      <h3 id="meta-info">META</h3>
+      <table class="req">
+        <thead>
+          <tr>
+            <th>Variable</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL</td>
+            <td class="code"><pre>&#x27;true&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>COLORTERM</td>
+            <td class="code"><pre>&#x27;truecolor&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>CONDA_DEFAULT_ENV</td>
+            <td class="code"><pre>&#x27;base&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>CONDA_EXE</td>
+            <td class="code"><pre>&#x27;/Users/patrickmarre/opt/anaconda3/bin/conda&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>CONDA_PREFIX</td>
+            <td class="code"><pre>&#x27;/Users/patrickmarre/opt/anaconda3&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>CONDA_PROMPT_MODIFIER</td>
+            <td class="code"><pre>&#x27;(base) &#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>CONDA_PYTHON_EXE</td>
+            <td class="code">
+              <pre>&#x27;/Users/patrickmarre/opt/anaconda3/bin/python&#x27;</pre>
+            </td>
+          </tr>
+
+          <tr>
+            <td>CONDA_SHLVL</td>
+            <td class="code"><pre>&#x27;1&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>CONTENT_LENGTH</td>
+            <td class="code"><pre>&#x27;6131&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>CONTENT_TYPE</td>
+            <td class="code"><pre>&#x27;application/json; charset=utf-8&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>DEVELOPMENT</td>
+            <td class="code"><pre>&#x27;True&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>DJANGO_SETTINGS_MODULE</td>
+            <td class="code"><pre>&#x27;bluebird_ski.settings&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>GATEWAY_INTERFACE</td>
+            <td class="code"><pre>&#x27;CGI/1.1&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>GIT_ASKPASS</td>
+            <td class="code"><pre>&#x27;********************&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>HOME</td>
+            <td class="code"><pre>&#x27;/Users/patrickmarre&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>HTTP_ACCEPT</td>
+            <td class="code"><pre>&#x27;*/*; q=0.5, application/xml&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>HTTP_ACCEPT_ENCODING</td>
+            <td class="code"><pre>&#x27;gzip&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>HTTP_CACHE_CONTROL</td>
+            <td class="code"><pre>&#x27;no-cache&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>HTTP_HOST</td>
+            <td class="code"><pre>&#x27;c04a41fc3514.ngrok.io&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>HTTP_STRIPE_SIGNATURE</td>
+            <td class="code"><pre>&#x27;********************&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>HTTP_USER_AGENT</td>
+            <td class="code">
+              <pre>&#x27;Stripe/1.0 (+https://stripe.com/docs/webhooks)&#x27;</pre>
+            </td>
+          </tr>
+
+          <tr>
+            <td>HTTP_X_FORWARDED_FOR</td>
+            <td class="code"><pre>&#x27;54.187.205.235&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>HTTP_X_FORWARDED_PROTO</td>
+            <td class="code"><pre>&#x27;http&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>LANG</td>
+            <td class="code"><pre>&#x27;en_US.UTF-8&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>LOCAL_GIT_DIRECTORY</td>
+            <td class="code">
+              <pre>
+(&#x27;/private/var/folders/_g/wntnnc553h92zd7bc8h2lxq80000gp/T/AppTranslocation/DE00ADA3-5753-465D-BF2C-595A7B5E3200/d/GitHub &#x27;
+ &#x27;Desktop.app/Contents/Resources/app/git&#x27;)</pre
+              >
+            </td>
+          </tr>
+
+          <tr>
+            <td>LOGNAME</td>
+            <td class="code"><pre>&#x27;patrickmarre&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>ORIGINAL_XDG_CURRENT_DESKTOP</td>
+            <td class="code"><pre>&#x27;undefined&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>PATH</td>
+            <td class="code">
+              <pre>
+&#x27;/Library/Frameworks/Python.framework/Versions/3.8/bin:/Users/patrickmarre/.rbenv/shims:/Users/patrickmarre/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/mysql/bin:/usr/local/mysql/support-files:/Library/Frameworks/Python.framework/Versions/3.8/bin:/Users/patrickmarre/opt/anaconda3/bin:/Users/patrickmarre/opt/anaconda3/condabin:/Users/patrickmarre/.rbenv/shims:/Users/patrickmarre/.rbenv/bin&#x27;</pre
+              >
+            </td>
+          </tr>
+
+          <tr>
+            <td>PATH_INFO</td>
+            <td class="code"><pre>&#x27;/checkout/wh/&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>PWD</td>
+            <td class="code">
+              <pre>&#x27;/Users/patrickmarre/Desktop/class-projects/ms4/bluebird_ski&#x27;</pre>
+            </td>
+          </tr>
+
+          <tr>
+            <td>QUERY_STRING</td>
+            <td class="code"><pre>&#x27;&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>RBENV_SHELL</td>
+            <td class="code"><pre>&#x27;bash&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>REMOTE_ADDR</td>
+            <td class="code"><pre>&#x27;127.0.0.1&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>REMOTE_HOST</td>
+            <td class="code"><pre>&#x27;&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>REQUEST_METHOD</td>
+            <td class="code"><pre>&#x27;POST&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>RUN_MAIN</td>
+            <td class="code"><pre>&#x27;true&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>SCRIPT_NAME</td>
+            <td class="code"><pre>&#x27;&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>SERVER_NAME</td>
+            <td class="code"><pre>&#x27;1.0.0.127.in-addr.arpa&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>SERVER_PORT</td>
+            <td class="code"><pre>&#x27;8000&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>SERVER_PROTOCOL</td>
+            <td class="code"><pre>&#x27;HTTP/1.1&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>SERVER_SOFTWARE</td>
+            <td class="code"><pre>&#x27;WSGIServer/0.2&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>SHELL</td>
+            <td class="code"><pre>&#x27;/bin/bash&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>SHLVL</td>
+            <td class="code"><pre>&#x27;3&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>SSH_AUTH_SOCK</td>
+            <td class="code">
+              <pre>&#x27;/private/tmp/com.apple.launchd.gxcHhS7Ij4/Listeners&#x27;</pre>
+            </td>
+          </tr>
+
+          <tr>
+            <td>STIPE_SECRET_KEY</td>
+            <td class="code"><pre>&#x27;********************&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>STRIPE_LOG</td>
+            <td class="code"><pre>&#x27;debug&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>STRIPE_PUBLIC_KEY</td>
+            <td class="code"><pre>&#x27;********************&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>STRIPE_SECRET_KEY</td>
+            <td class="code"><pre>&#x27;********************&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>STRIPE_WH_SECRET</td>
+            <td class="code"><pre>&#x27;********************&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>TERM</td>
+            <td class="code"><pre>&#x27;xterm-256color&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>TERM_PROGRAM</td>
+            <td class="code"><pre>&#x27;vscode&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>TERM_PROGRAM_VERSION</td>
+            <td class="code"><pre>&#x27;1.51.1&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>TMPDIR</td>
+            <td class="code">
+              <pre>&#x27;/var/folders/_g/wntnnc553h92zd7bc8h2lxq80000gp/T/&#x27;</pre>
+            </td>
+          </tr>
+
+          <tr>
+            <td>TZ</td>
+            <td class="code"><pre>&#x27;UTC&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>USER</td>
+            <td class="code"><pre>&#x27;patrickmarre&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>VSCODE_GIT_ASKPASS_MAIN</td>
+            <td class="code"><pre>&#x27;********************&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>VSCODE_GIT_ASKPASS_NODE</td>
+            <td class="code"><pre>&#x27;********************&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>VSCODE_GIT_IPC_HANDLE</td>
+            <td class="code">
+              <pre>
+&#x27;/var/folders/_g/wntnnc553h92zd7bc8h2lxq80000gp/T/vscode-git-ece50b31b8.sock&#x27;</pre
+              >
+            </td>
+          </tr>
+
+          <tr>
+            <td>XPC_FLAGS</td>
+            <td class="code"><pre>&#x27;0x0&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>XPC_SERVICE_NAME</td>
+            <td class="code"><pre>&#x27;0&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>_</td>
+            <td class="code">
+              <pre>&#x27;/Library/Frameworks/Python.framework/Versions/3.8/bin/python3&#x27;</pre>
+            </td>
+          </tr>
+
+          <tr>
+            <td>_CE_CONDA</td>
+            <td class="code"><pre>&#x27;&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>_CE_M</td>
+            <td class="code"><pre>&#x27;&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>__CF_USER_TEXT_ENCODING</td>
+            <td class="code"><pre>&#x27;0x1F6:0x0:0x0&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>wsgi.errors</td>
+            <td class="code">
+              <pre>
+&lt;_io.TextIOWrapper name=&#x27;&lt;stderr&gt;&#x27; mode=&#x27;w&#x27; encoding=&#x27;utf-8&#x27;&gt;</pre
+              >
+            </td>
+          </tr>
+
+          <tr>
+            <td>wsgi.file_wrapper</td>
+            <td class="code"><pre>&lt;class &#x27;wsgiref.util.FileWrapper&#x27;&gt;</pre></td>
+          </tr>
+
+          <tr>
+            <td>wsgi.input</td>
+            <td class="code">
+              <pre>&lt;django.core.handlers.wsgi.LimitedStream object at 0x7fbf8d959520&gt;</pre>
+            </td>
+          </tr>
+
+          <tr>
+            <td>wsgi.multiprocess</td>
+            <td class="code"><pre>False</pre></td>
+          </tr>
+
+          <tr>
+            <td>wsgi.multithread</td>
+            <td class="code"><pre>True</pre></td>
+          </tr>
+
+          <tr>
+            <td>wsgi.run_once</td>
+            <td class="code"><pre>False</pre></td>
+          </tr>
+
+          <tr>
+            <td>wsgi.url_scheme</td>
+            <td class="code"><pre>&#x27;http&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>wsgi.version</td>
+            <td class="code"><pre>(1, 0)</pre></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3 id="settings-info">Settings</h3>
+      <h4>Using settings module <code>bluebird_ski.settings</code></h4>
+      <table class="req">
+        <thead>
+          <tr>
+            <th>Setting</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>ABSOLUTE_URL_OVERRIDES</td>
+            <td class="code"><pre>{}</pre></td>
+          </tr>
+
+          <tr>
+            <td>ACCOUNT_AUTHENTICATION_METHOD</td>
+            <td class="code"><pre>&#x27;username_email&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>ACCOUNT_EMAIL_REQUIRED</td>
+            <td class="code"><pre>True</pre></td>
+          </tr>
+
+          <tr>
+            <td>ACCOUNT_EMAIL_VERIFICATION</td>
+            <td class="code"><pre>&#x27;mandatory&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE</td>
+            <td class="code"><pre>True</pre></td>
+          </tr>
+
+          <tr>
+            <td>ACCOUNT_USERNAME_MIN_LENGTH</td>
+            <td class="code"><pre>4</pre></td>
+          </tr>
+
+          <tr>
+            <td>ADMINS</td>
+            <td class="code"><pre>[]</pre></td>
+          </tr>
+
+          <tr>
+            <td>ALLOWED_HOSTS</td>
+            <td class="code">
+              <pre>
+[&#x27;bluebird-ski-shop.herokuapp.com&#x27;,
+ &#x27;localhost&#x27;,
+ &#x27;127.0.0.1&#x27;,
+ &#x27;c04a41fc3514.ngrok.io&#x27;]</pre
+              >
+            </td>
+          </tr>
+
+          <tr>
+            <td>APPEND_SLASH</td>
+            <td class="code"><pre>True</pre></td>
+          </tr>
+
+          <tr>
+            <td>AUTHENTICATION_BACKENDS</td>
+            <td class="code">
+              <pre>
+[&#x27;django.contrib.auth.backends.ModelBackend&#x27;,
+ &#x27;allauth.account.auth_backends.AuthenticationBackend&#x27;]</pre
+              >
+            </td>
+          </tr>
+
+          <tr>
+            <td>AUTH_PASSWORD_VALIDATORS</td>
+            <td class="code"><pre>&#x27;********************&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>AUTH_USER_MODEL</td>
+            <td class="code"><pre>&#x27;auth.User&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>BASE_DIR</td>
+            <td class="code">
+              <pre>
+PosixPath(&#x27;/Users/patrickmarre/Desktop/class-projects/ms4/bluebird_ski&#x27;)</pre
+              >
+            </td>
+          </tr>
+
+          <tr>
+            <td>CACHES</td>
+            <td class="code">
+              <pre>
+{&#x27;default&#x27;: {&#x27;BACKEND&#x27;: &#x27;django.core.cache.backends.locmem.LocMemCache&#x27;}}</pre
+              >
+            </td>
+          </tr>
+
+          <tr>
+            <td>CACHE_MIDDLEWARE_ALIAS</td>
+            <td class="code"><pre>&#x27;default&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>CACHE_MIDDLEWARE_KEY_PREFIX</td>
+            <td class="code"><pre>&#x27;********************&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>CACHE_MIDDLEWARE_SECONDS</td>
+            <td class="code"><pre>600</pre></td>
+          </tr>
+
+          <tr>
+            <td>CRISPY_TEMPLATE_PACK</td>
+            <td class="code"><pre>&#x27;bootstrap4&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>CSRF_COOKIE_AGE</td>
+            <td class="code"><pre>31449600</pre></td>
+          </tr>
+
+          <tr>
+            <td>CSRF_COOKIE_DOMAIN</td>
+            <td class="code"><pre>None</pre></td>
+          </tr>
+
+          <tr>
+            <td>CSRF_COOKIE_HTTPONLY</td>
+            <td class="code"><pre>False</pre></td>
+          </tr>
+
+          <tr>
+            <td>CSRF_COOKIE_NAME</td>
+            <td class="code"><pre>&#x27;csrftoken&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>CSRF_COOKIE_PATH</td>
+            <td class="code"><pre>&#x27;/&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>CSRF_COOKIE_SAMESITE</td>
+            <td class="code"><pre>&#x27;Lax&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>CSRF_COOKIE_SECURE</td>
+            <td class="code"><pre>False</pre></td>
+          </tr>
+
+          <tr>
+            <td>CSRF_FAILURE_VIEW</td>
+            <td class="code"><pre>&#x27;django.views.csrf.csrf_failure&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>CSRF_HEADER_NAME</td>
+            <td class="code"><pre>&#x27;HTTP_X_CSRFTOKEN&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>CSRF_TRUSTED_ORIGINS</td>
+            <td class="code"><pre>[]</pre></td>
+          </tr>
+
+          <tr>
+            <td>CSRF_USE_SESSIONS</td>
+            <td class="code"><pre>False</pre></td>
+          </tr>
+
+          <tr>
+            <td>DATABASES</td>
+            <td class="code">
+              <pre>
+{&#x27;default&#x27;: {&#x27;ATOMIC_REQUESTS&#x27;: False,
+             &#x27;AUTOCOMMIT&#x27;: True,
+             &#x27;CONN_MAX_AGE&#x27;: 0,
+             &#x27;ENGINE&#x27;: &#x27;django.db.backends.sqlite3&#x27;,
+             &#x27;HOST&#x27;: &#x27;&#x27;,
+             &#x27;NAME&#x27;: PosixPath(&#x27;/Users/patrickmarre/Desktop/class-projects/ms4/bluebird_ski/db.sqlite3&#x27;),
+             &#x27;OPTIONS&#x27;: {},
+             &#x27;PASSWORD&#x27;: &#x27;********************&#x27;,
+             &#x27;PORT&#x27;: &#x27;&#x27;,
+             &#x27;TEST&#x27;: {&#x27;CHARSET&#x27;: None,
+                      &#x27;COLLATION&#x27;: None,
+                      &#x27;MIGRATE&#x27;: True,
+                      &#x27;MIRROR&#x27;: None,
+                      &#x27;NAME&#x27;: None},
+             &#x27;TIME_ZONE&#x27;: None,
+             &#x27;USER&#x27;: &#x27;&#x27;}}</pre
+              >
+            </td>
+          </tr>
+
+          <tr>
+            <td>DATABASE_ROUTERS</td>
+            <td class="code"><pre>[]</pre></td>
+          </tr>
+
+          <tr>
+            <td>DATA_UPLOAD_MAX_MEMORY_SIZE</td>
+            <td class="code"><pre>2621440</pre></td>
+          </tr>
+
+          <tr>
+            <td>DATA_UPLOAD_MAX_NUMBER_FIELDS</td>
+            <td class="code"><pre>1000</pre></td>
+          </tr>
+
+          <tr>
+            <td>DATETIME_FORMAT</td>
+            <td class="code"><pre>&#x27;N j, Y, P&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>DATETIME_INPUT_FORMATS</td>
+            <td class="code">
+              <pre>
+[&#x27;%Y-%m-%d %H:%M:%S&#x27;,
+ &#x27;%Y-%m-%d %H:%M:%S.%f&#x27;,
+ &#x27;%Y-%m-%d %H:%M&#x27;,
+ &#x27;%m/%d/%Y %H:%M:%S&#x27;,
+ &#x27;%m/%d/%Y %H:%M:%S.%f&#x27;,
+ &#x27;%m/%d/%Y %H:%M&#x27;,
+ &#x27;%m/%d/%y %H:%M:%S&#x27;,
+ &#x27;%m/%d/%y %H:%M:%S.%f&#x27;,
+ &#x27;%m/%d/%y %H:%M&#x27;]</pre
+              >
+            </td>
+          </tr>
+
+          <tr>
+            <td>DATE_FORMAT</td>
+            <td class="code"><pre>&#x27;N j, Y&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>DATE_INPUT_FORMATS</td>
+            <td class="code">
+              <pre>
+[&#x27;%Y-%m-%d&#x27;,
+ &#x27;%m/%d/%Y&#x27;,
+ &#x27;%m/%d/%y&#x27;,
+ &#x27;%b %d %Y&#x27;,
+ &#x27;%b %d, %Y&#x27;,
+ &#x27;%d %b %Y&#x27;,
+ &#x27;%d %b, %Y&#x27;,
+ &#x27;%B %d %Y&#x27;,
+ &#x27;%B %d, %Y&#x27;,
+ &#x27;%d %B %Y&#x27;,
+ &#x27;%d %B, %Y&#x27;]</pre
+              >
+            </td>
+          </tr>
+
+          <tr>
+            <td>DEBUG</td>
+            <td class="code"><pre>True</pre></td>
+          </tr>
+
+          <tr>
+            <td>DEBUG_PROPAGATE_EXCEPTIONS</td>
+            <td class="code"><pre>False</pre></td>
+          </tr>
+
+          <tr>
+            <td>DECIMAL_SEPARATOR</td>
+            <td class="code"><pre>&#x27;.&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>DEFAULT_CHARSET</td>
+            <td class="code"><pre>&#x27;utf-8&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>DEFAULT_EXCEPTION_REPORTER</td>
+            <td class="code"><pre>&#x27;django.views.debug.ExceptionReporter&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>DEFAULT_EXCEPTION_REPORTER_FILTER</td>
+            <td class="code">
+              <pre>&#x27;django.views.debug.SafeExceptionReporterFilter&#x27;</pre>
+            </td>
+          </tr>
+
+          <tr>
+            <td>DEFAULT_FILE_STORAGE</td>
+            <td class="code"><pre>&#x27;django.core.files.storage.FileSystemStorage&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>DEFAULT_FROM_EMAIL</td>
+            <td class="code"><pre>&#x27;bluebirdski@example.com&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>DEFAULT_HASHING_ALGORITHM</td>
+            <td class="code"><pre>&#x27;sha256&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>DEFAULT_INDEX_TABLESPACE</td>
+            <td class="code"><pre>&#x27;&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>DEFAULT_TABLESPACE</td>
+            <td class="code"><pre>&#x27;&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>DISALLOWED_USER_AGENTS</td>
+            <td class="code"><pre>[]</pre></td>
+          </tr>
+
+          <tr>
+            <td>EMAIL_BACKEND</td>
+            <td class="code">
+              <pre>&#x27;django.core.mail.backends.console.EmailBackend&#x27;</pre>
+            </td>
+          </tr>
+
+          <tr>
+            <td>EMAIL_HOST</td>
+            <td class="code"><pre>&#x27;localhost&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>EMAIL_HOST_PASSWORD</td>
+            <td class="code"><pre>&#x27;********************&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>EMAIL_HOST_USER</td>
+            <td class="code"><pre>&#x27;&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>EMAIL_PORT</td>
+            <td class="code"><pre>25</pre></td>
+          </tr>
+
+          <tr>
+            <td>EMAIL_SSL_CERTFILE</td>
+            <td class="code"><pre>None</pre></td>
+          </tr>
+
+          <tr>
+            <td>EMAIL_SSL_KEYFILE</td>
+            <td class="code"><pre>&#x27;********************&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>EMAIL_SUBJECT_PREFIX</td>
+            <td class="code"><pre>&#x27;[Django] &#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>EMAIL_TIMEOUT</td>
+            <td class="code"><pre>None</pre></td>
+          </tr>
+
+          <tr>
+            <td>EMAIL_USE_LOCALTIME</td>
+            <td class="code"><pre>False</pre></td>
+          </tr>
+
+          <tr>
+            <td>EMAIL_USE_SSL</td>
+            <td class="code"><pre>False</pre></td>
+          </tr>
+
+          <tr>
+            <td>EMAIL_USE_TLS</td>
+            <td class="code"><pre>False</pre></td>
+          </tr>
+
+          <tr>
+            <td>FILE_UPLOAD_DIRECTORY_PERMISSIONS</td>
+            <td class="code"><pre>None</pre></td>
+          </tr>
+
+          <tr>
+            <td>FILE_UPLOAD_HANDLERS</td>
+            <td class="code">
+              <pre>
+[&#x27;django.core.files.uploadhandler.MemoryFileUploadHandler&#x27;,
+ &#x27;django.core.files.uploadhandler.TemporaryFileUploadHandler&#x27;]</pre
+              >
+            </td>
+          </tr>
+
+          <tr>
+            <td>FILE_UPLOAD_MAX_MEMORY_SIZE</td>
+            <td class="code"><pre>2621440</pre></td>
+          </tr>
+
+          <tr>
+            <td>FILE_UPLOAD_PERMISSIONS</td>
+            <td class="code"><pre>420</pre></td>
+          </tr>
+
+          <tr>
+            <td>FILE_UPLOAD_TEMP_DIR</td>
+            <td class="code"><pre>None</pre></td>
+          </tr>
+
+          <tr>
+            <td>FIRST_DAY_OF_WEEK</td>
+            <td class="code"><pre>0</pre></td>
+          </tr>
+
+          <tr>
+            <td>FIXTURE_DIRS</td>
+            <td class="code"><pre>[]</pre></td>
+          </tr>
+
+          <tr>
+            <td>FORCE_SCRIPT_NAME</td>
+            <td class="code"><pre>None</pre></td>
+          </tr>
+
+          <tr>
+            <td>FORMAT_MODULE_PATH</td>
+            <td class="code"><pre>None</pre></td>
+          </tr>
+
+          <tr>
+            <td>FORM_RENDERER</td>
+            <td class="code"><pre>&#x27;django.forms.renderers.DjangoTemplates&#x27;</pre></td>
+          </tr>
+
+          <tr>
+            <td>IGNORABLE_404_URLS</td>
+            <td class="code"><pre>[]</pre></td>
+          </tr>
+
+          <tr>
+            <td>INSTALLED_APPS</td>
+            <td class="code">
+              <pre>
+[&#x27;django.contrib.admin&#x27;,
+ &#x27;django.contrib.auth&#x27;,
+ &#x27;django.contrib.contenttypes&#x27;,
+ &#x27;django.contrib.sessions&#x27;,
+ &#x27;django.contrib.messages&#x27;,
+ &#x27;django.contrib.staticfiles&#x27;,
+ &#x27;django.contrib.sites&#x27;,
+ &#x27;allauth&#x27;,
+ &#x27;allauth.account&#x27;,
+ &#x27;allauth.socialaccount&#x27;,
+ &#x27;home&#x27;,
+ &#x27;services&#x27;,
+ &#x27;cart&#x27;,
+ &#x27;checkout&#x27;,
+ &#x27;crispy_forms&#x27;,
+ &#x27;profiles&#x27;,
+ ...</pre
+              >
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
