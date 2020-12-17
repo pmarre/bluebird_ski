@@ -49,7 +49,7 @@ class StripeWH_Handler:
         """
         intent = event.data.object
         pid = intent.id
-        cart = intent.metadata.cart
+        cart = intent.metadata.bag
         save_info = intent.metadata.save_info
 
         billing_details = intent.charges.data[0].billing_details
@@ -146,7 +146,7 @@ class StripeWH_Handler:
                     order.delete()
                 return HttpResponse(
                     content=f'Webhook received: {event["type"]} | ERROR: {e}',
-                    status=400)
+                    status=500)
         self._send_confirmation_email(order)
         return HttpResponse(
             content=f'Webhook received: {event["type"]} | SUCCESS: Created order in webhook',
