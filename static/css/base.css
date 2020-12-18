@@ -308,34 +308,34 @@ body {
 }
 
 .item-1 {
-  background-image: url('/media/ski-boots.jpg');
+  background-image: url('https://bluebird-ski-shop.s3-us-west-1.amazonaws.com/media/grid-1.jpg');
 }
 .item-2 {
-  background-image: url('/media/ski-edge.jpg');
+  background-image: url('https://bluebird-ski-shop.s3-us-west-1.amazonaws.com/media/grid-2.jpg');
 }
 .item-3 {
-  background-image: url('/media/ski-hp-image.jpg');
+  background-image: url('https://bluebird-ski-shop.s3-us-west-1.amazonaws.com/media/grid-3.jpg');
 }
 .item-4 {
-  background-image: url('/media/ski-hp-image2.jpg');
+  background-image: url('https://bluebird-ski-shop.s3-us-west-1.amazonaws.com/media/grid-4.jpg');
 }
 .item-5 {
-  background-image: url('/media/ski-mount.jpg');
+  background-image: url('https://bluebird-ski-shop.s3-us-west-1.amazonaws.com/media/grid-5.jpg');
 }
 .item-6 {
-  background-image: url('/media/ski-rentals.jpg');
+  background-image: url('https://bluebird-ski-shop.s3-us-west-1.amazonaws.com/media/grid-6.jpg');
 }
 .item-7 {
-  background-image: url('/media/ski-repair.jpg');
+  background-image: url('https://bluebird-ski-shop.s3-us-west-1.amazonaws.com/media/grid-7.jpg');
 }
 .item-8 {
-  background-image: url('/media/ski-tuning.jpg');
+  background-image: url('https://bluebird-ski-shop.s3-us-west-1.amazonaws.com/media/grid-8.jpg');
 }
 .item-9 {
-  background-image: url('/media/ski-wax.jpg');
+  background-image: url('https://bluebird-ski-shop.s3-us-west-1.amazonaws.com/media/grid-9.jpg');
 }
 .item-10 {
-  background-image: url('/media/jr-ski-rental.jpg');
+  background-image: url('https://bluebird-ski-shop.s3-us-west-1.amazonaws.com/media/grid-10.jpg');
 }
 
 .contact-section {

@@ -85,9 +85,16 @@
         </div>
       </div>
       <div class="col-12 col-lg-6">
-        <p class="text-muted">Please fill out the form below to complete your order</p>
+        <p class="text-muted">Please fill out the form below to complete your order:</p>
         <form action="{% url 'checkout' %}" method="POST" id="payment-form">
           {% csrf_token %}
+          <fieldset class="rounded px-3 mb-5">
+            <legend class="fieldset-label small text-black px-2 w-auto">
+              Pick-Up/Drop-Off Location:
+            </legend>
+            {{ order_form.shop_location | as_crispy_field }}
+            <div class="shop_address"></div>
+          </fieldset>
           <fieldset class="rounded px-3 mb-5">
             <legend class="fieldset-label small text-black px-2 w-auto">Details</legend>
             {{ order_form.full_name | as_crispy_field }} {{ order_form.email | as_crispy_field }}
@@ -177,5 +184,42 @@
 {{ stripe_public_key|json_script:"id_stripe_public_key" }}
 <!--  -->
 {{ client_secret|json_script:"id_client_secret" }}
+<script>
+  $('#id_shop_location').change(function (e) {
+    shop_loc = $('#id_shop_location').val();
+    if (shop_loc === 'sf') {
+      address = `
+        <address>
+          <span>1616 Mountain View Avenue</span><br />
+          <span>San Francisco, CA 94016</span><br />
+          <a href="tel:+14155552916">415-555-2916</a><br />
+          <span>Open 7:00 AM - 5:00 PM, daily</span>
+        </address>`;
+    } else if (shop_loc === 'tahoe') {
+      address = `
+        <address>
+          <span>13589 Main Street</span><br />
+          <span>Tahoe City, CA 96145</span><br />
+          <a href="tel:+5305551616">530-555-1616</a><br />
+          <span>Open 7:00 AM - 5:00 PM, daily</span>
+        </address>`;
+    } else if (shop_loc === 'bishop') {
+      address = `
+        <address>
+          <span>1248 Lake View Street</span><br />
+          <span>Bishop, CA 93514</span><br />
+          <a href="tel:+7605551304">760-555-1304</a><br />
+          <span>Open 7:00 AM - 5:00 PM, daily</span>
+        </address>`;
+    } else {
+      address = '';
+    }
+    $('.shop_address').hide();
+    html = `<div>${address}</div>`;
+    $('.shop_address').html(html);
+    $('.shop_address').show();
+  });
+</script>
 <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
+
 {% endblock%}
