@@ -19,11 +19,18 @@ class StripeWH_Handler:
 
     def _send_confirmation_email(self, order):
         """Send the user a confirmation email"""
+        if order.shop_location == 'sf':
+            shop_location = '1616 Mountain View Avenue\nSan Francisco, CA 94016\n415-555-2916\nOpen 7:00 AM - 5:00 PM, daily'
+        elif order.shop_location == 'sf':
+            shop_location = '13589 Main Street\nTahoe City, CA 96145\n530-555-1616\nOpen 7:00 AM - 5:00 PM, daily'
+        else:
+            shop_location = '1248 Lake View Street\nBishop, CA 93514\n760-555-1304\nOpen 7:00 AM - 5:00 PM, daily'
+
         cust_email = order.email
         subject = render_to_string('checkout/confirmation_emails/confirmation_email_subject.txt',
                                    {'order': order})
         body = render_to_string('checkout/confirmation_emails/confirmation_email_body.txt',
-                                {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
+                                {'order': order, 'shop_location': shop_location, 'contact_email': settings.DEFAULT_FROM_EMAIL})
 
         send_mail(
             subject,

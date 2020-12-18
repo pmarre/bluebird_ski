@@ -9,22 +9,7 @@ Grand Total: ${{ order.grand_total }}
 
 Your pick-up/drop-off location is: 
 
-{% if order.shop_location == 'sf' %}
-1616 Mountain View Avenue
-San Francisco, CA 94016
-415-555-2916
-Open 7:00 AM - 5:00 PM, daily
-{% elif order.shop_location == 'tahoe' %}
-13589 Main Street
-Tahoe City, CA 96145
-530-555-1616
-Open 7:00 AM - 5:00 PM, daily
-{% else %}
-1248 Lake View Street
-Bishop, CA 93514
-760-555-1304
-Open 7:00 AM - 5:00 PM, daily
-{% endif %}
+{{ shop_location }}
 
 We've got your phone number on file as {{ order.phone_number }}.
 
