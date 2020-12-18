@@ -9,7 +9,6 @@ Grand Total: ${{ order.grand_total }}
 
 Your pick-up/drop-off location is: 
 
-{{ shop_location }}
 
 We've got your phone number on file as {{ order.phone_number }}.
 
