@@ -32,6 +32,7 @@ class StripeWH_Handler:
         body = render_to_string('checkout/confirmation_emails/confirmation_email_body.txt',
                                 {'order': order, 'shop_location': shop_location, 'contact_email': settings.DEFAULT_FROM_EMAIL})
 
+        print(body)
         send_mail(
             subject,
             body,
@@ -53,9 +54,7 @@ class StripeWH_Handler:
         Handle the payment_intent.succeeded webhook from Stripe
         """
         intent = event.data.object
-        print(intent)
         pid = intent.id
-        print(intent.metadata)
         cart = intent.metadata.cart
         save_info = intent.metadata.save_info
 
