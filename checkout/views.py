@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpR
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
+from decimal import Decimal
 
 from .forms import OrderForm
 from .models import Order, OrderLineItem
@@ -39,6 +40,8 @@ def checkout(request):
 
     if request.method == 'POST':
         cart = request.session.get('cart', {})
+        current_cart = cart_contents(request)
+        total = current_cart['total']
 
         form_data = {
             'shop_location': request.POST['shop_location'],
@@ -59,6 +62,10 @@ def checkout(request):
             pid = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_pid = pid
             order.original_cart = json.dumps(cart)
+            if request.user.is_authenticated:
+                print('total: ', total)
+                order.discount = float(total) * 0.1
+                print(('discount: ', order.discount))
             order.save()
             for item_id, item_data in cart.items():
                 try:

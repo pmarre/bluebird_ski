@@ -26,7 +26,6 @@ def add_to_cart(request, item_id):
 
     if size:
         if item_id in list(cart.keys()):
-            print(cart[item_id]['items_by_size'])
             if size in cart[item_id]['items_by_size'].keys():
                 cart[item_id]['items_by_size'][size] += quantity
                 messages.success(
@@ -50,9 +49,7 @@ def add_to_cart(request, item_id):
             messages.success(
                 request, f'Successfully added {service.name} to cart!')
 
-    print(cart)
     request.session['cart'] = cart
-    print(request.session['cart'])
     return redirect(redirect_url)
 
 

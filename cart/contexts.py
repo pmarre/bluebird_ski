@@ -39,8 +39,8 @@ def cart_contents(request):
                 })
 
     if u_name == 'AnonymousUser':
-        grand_total = total
         discount = 0
+        grand_total = total
     else:
         discount = total * Decimal(0.1)
         grand_total = total - discount
@@ -51,8 +51,6 @@ def cart_contents(request):
         'service_count': service_count,
         'grand_total': grand_total,
         'discount': discount,
-        'total': total,
-
     }
 
     return context

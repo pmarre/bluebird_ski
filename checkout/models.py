@@ -1,8 +1,10 @@
 import uuid
+from decimal import Decimal
 
 from django.db import models
 from django.db.models import Sum
 from django.conf import settings
+from django.contrib.auth.models import User
 
 from django_countries.fields import CountryField
 
@@ -11,8 +13,8 @@ from profiles.models import UserProfile
 
 
 class Order(models.Model):
-    SHOP_LOCATIONS = [('', 'Shop Location *'), ('sf', 'San Francisco'),
-                      ('tahoe', 'Tahoe City'), ('bishop', 'Bishop')]
+    SHOP_LOCATIONS = (('', 'Shop Location *'), ('sf', 'San Francisco'),
+                      ('tahoe', 'Tahoe City'), ('bishop', 'Bishop'))
 
     order_number = models.CharField(max_length=32, null=False, editable=False)
     user_profile = models.ForeignKey(
@@ -29,7 +31,7 @@ class Order(models.Model):
     street_address2 = models.CharField(max_length=80, null=True, blank=True)
     county = models.CharField(max_length=80, null=True, blank=True)
     date = models.DateTimeField(auto_now_add=True)
-    delivery_cost = models.DecimalField(
+    discount = models.DecimalField(
         max_digits=6, decimal_places=2, null=False, default=0)
     order_total = models.DecimalField(
         max_digits=10, decimal_places=2, null=False, default=0)
@@ -48,11 +50,17 @@ class Order(models.Model):
     def update_total(self):
         """
         Update grand total each time a line item is added,
-        accounting for delivery costs.
+        accounting for member discount.
         """
         self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))[
             'lineitem_total__sum'] or 0
-        self.grand_total = self.order_total
+
+        if self.discount > 0:
+            self.grand_total = self.order_total - \
+                Decimal((float(self.order_total) * (0.1)))
+        else:
+            self.grand_total = self.order_total
+
         self.save()
 
     def save(self, *args, **kwargs):
