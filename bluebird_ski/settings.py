@@ -129,7 +129,7 @@ WSGI_APPLICATION = 'bluebird_ski.wsgi.application'
 
 if 'DATABASE_URL' in os.environ:
     DATABASES = {
-        'default': dj_database_url.parse(os.get'DATABASE_URL'),
+        'default': dj_database_url.parse(os.get('DATABASE_URL')),
     }
 else:
     DATABASES = {
