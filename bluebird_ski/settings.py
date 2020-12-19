@@ -129,7 +129,7 @@ WSGI_APPLICATION = 'bluebird_ski.wsgi.application'
 
 if 'DATABASE_URL' in os.environ:
     DATABASES = {
-        'default': dj_database_url.parse('postgres://plxgdztoucwrax:1ebdc50a191f8be46bee27664a62e52e7a14e238b50913d9100e3440062103ed@ec2-35-173-114-25.compute-1.amazonaws.com:5432/d4k9vea7jbripn'),
+        'default': dj_database_url.parse(os.get'DATABASE_URL'),
     }
 else:
     DATABASES = {
