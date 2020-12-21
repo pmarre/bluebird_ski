@@ -5,13 +5,13 @@ Stripe payment requires a test credit card number to check out, please use: 4242
 
 ## Table of Contents 
 1. [UX](https://github.com/pmarre/bluebird_ski/blob/main/README.md#user-experience)
-  - [User Stories](https://github.com/pmarre/bluebird_ski/blob/main/README.md#user-stories)
-  - [Strategy](https://github.com/pmarre/bluebird_ski/blob/main/README.md#strategy)
-  - [Scope](https://github.com/pmarre/bluebird_ski/blob/main/README.md#scope)
-  - [Structure](https://github.com/pmarre/bluebird_ski/blob/main/README.md#structure)
-  - [Wireframes](https://github.com/pmarre/bluebird_ski/blob/main/README.md#wireframes)
+   - [User Stories](https://github.com/pmarre/bluebird_ski/blob/main/README.md#user-stories)
+   - [Strategy](https://github.com/pmarre/bluebird_ski/blob/main/README.md#strategy)
+   - [Scope](https://github.com/pmarre/bluebird_ski/blob/main/README.md#scope)
+   - [Structure](https://github.com/pmarre/bluebird_ski/blob/main/README.md#structure)
+   - [Wireframes](https://github.com/pmarre/bluebird_ski/blob/main/README.md#wireframes)
 2. [Features](https://github.com/pmarre/bluebird_ski/blob/main/README.md#features)
-  - [Future Features](https://github.com/pmarre/bluebird_ski/blob/main/README.md#future-features)
+   - [Future Features](https://github.com/pmarre/bluebird_ski/blob/main/README.md#future-features)
 3. [Technology Used](https://github.com/pmarre/bluebird_ski/blob/main/README.md#technology-used)
 4. [Testing](https://github.com/pmarre/bluebird_ski/blob/main/README.md#testing)
 6. [Deployment](https://github.com/pmarre/bluebird_ski/blob/main/README.md#deployment)
@@ -26,9 +26,9 @@ Stripe payment requires a test credit card number to check out, please use: 4242
 
 ### User Stories
 
--_"I am learning to ski a place to easily reserve skis online in advance"_, Completed by allowing users to easily search the site for the service they are looking for and checkout. 
--_"I am always looking to save money by subscribing to a website"_, Completed by allowing users to sign-up and save 10% on all purchases. 
--_""_
+- _"I am learning to ski a place to easily reserve skis online in advance"_, Completed by allowing users to easily search the site for the service they are looking for and checkout. 
+- _"I am always looking to save money by subscribing to a website"_, Completed by allowing users to sign-up and save 10% on all purchases. 
+
 
 ### Strategy
 
@@ -131,7 +131,7 @@ This project is built with Django, Python, JQuery, CSS, HTML, and a uses a Postg
 
 To create a local copy of this repository, follow these steps:
 
-1. Go to my [repo](https://github.com/pmarre/scratch/)
+1. Go to my [repo](https://github.com/pmarre/bluebird_ski/)
 2. Click the "Clone or Download" button on the top-right of the page
 3. Click the copy icon to copy the HTTPS link
 4. Open terminal
