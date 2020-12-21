@@ -1,7 +1,7 @@
 # Bluebird Ski Shop
 
-Bluebird Ski Shop can be accessed here: [Live Site](https://bluebird-ski-shop.herokuapp.com/)
-Stripe payment requires a test credit card number to check out, please use: 4242 4242 4242 4242 Exp: 04/24 Zip: 42424
+- Bluebird Ski Shop can be accessed here: [Live Site](https://bluebird-ski-shop.herokuapp.com/)
+- Stripe payment requires a test credit card number to check out, please use: 4242 4242 4242 4242 Exp: 04/24 Zip: 42424
 
 ## Table of Contents 
 1. [UX](https://github.com/pmarre/bluebird_ski/blob/main/README.md#user-experience)
