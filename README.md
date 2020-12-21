@@ -13,7 +13,7 @@ Stripe payment requires a test credit card number to check out, please use: 4242
 2. [Features](https://github.com/pmarre/bluebird_ski/blob/main/README.md#features)
    - [Future Features](https://github.com/pmarre/bluebird_ski/blob/main/README.md#future-features)
 3. [Technology Used](https://github.com/pmarre/bluebird_ski/blob/main/README.md#technology-used)
-4. [Testing](https://github.com/pmarre/bluebird_ski/blob/main/README.md#testing)
+4. [Testing](https://github.com/pmarre/bluebird_ski/blob/main/README.md#manual-testing)
 6. [Deployment](https://github.com/pmarre/bluebird_ski/blob/main/README.md#deployment)
 
 ## User Experience 
@@ -89,7 +89,7 @@ This project is built with Django, Python, JQuery, CSS, HTML, and a uses a Postg
 3. Date functionality
    - For more accurate reservations, I would like to use a date range picker to reserve equipment on a specific day 
 
-## Technologies Used
+## Technology Used
 
 - Python - used as the backend language to connect what the user sees and the data they have input
 - Django - framework used to simplify python for faster builds
