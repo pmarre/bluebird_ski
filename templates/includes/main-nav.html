@@ -26,7 +26,7 @@
               class="text-white nav-link p-0 text-uppercase"
               href="{% url 'services' %}?category=rentals"
             >
-              <div clas="text-center">
+              <div class="text-center">
                 <p class="my-0">Rentals</p>
               </div>
             </a>
@@ -40,7 +40,7 @@
               aria-haspopup="true"
               aria-expanded="false"
             >
-              <div clas="text-center">
+              <div class="text-center">
                 <p class="my-0">Services</p>
               </div>
             </a>
@@ -66,12 +66,12 @@
             <a
               class="text-white nav-link p-0 text-uppercase"
               href="#"
-              id="user-options"
+              id="user-login-options"
               data-toggle="dropdown"
               aria-haspopup="true"
               aria-expanded="false"
             >
-              <div clas="text-center">
+              <div class="text-center">
                 {% if request.user.is_authenticated %}
                 <p class="my-0"><i class="far fa-user-circle"></i> My Account</p>
                 {% else %}
@@ -79,7 +79,7 @@
                 {% endif %}
               </div>
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+            <div class="dropdown-menu border-0" aria-labelledby="user-login-options">
               {% if request.user.is_authenticated %} {% if request.user.is_superuser %}
               <a href="{% url 'add_service' %}" class="dropdown-item text-uppercase"
                 >Service Management</a
